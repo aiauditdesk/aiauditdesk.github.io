@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Public contact. Source: versions/option-2/contact-evergreen-type-combined.html -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Dominic Andreas, CPA</title>
+  <meta name="description" content="Free 20-minute call to see if it is a fit. Independent internal audit, GRC, and governed automation support." />
+  <meta name="theme-color" content="#1F3D32" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3D32'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="site.css" />
+  <style id="page-css">
+    :root {
+      --forest: #1F3D32;
+      --forest-2: #18332A;
+      --leaf: #7A6540;
+      --ink: #1A1714;
+      --muted: #6B6256;
+      --line: #D6CCBC;
+      --paper: #FFFEF9;
+      --panel: #FFFEF9;
+      --gold: #1F3D32;
+      --rule: #D6CCBC;
+    }
+    body, .small, .logo, button, input, select, textarea, label {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+    }
+    h1, h2, h3, h1.page-title, .contact-copy h1 {
+      font-family: "Source Serif 4", Georgia, serif !important;
+    }
+    header { background: #FFFEF9; }
+    .dot { background: #1F3D32 !important; }
+    .logo svg { display: block; height: 40px; width: auto; }
+    .btn { background: #1F3D32 !important; color: #FFF9F0 !important; border-radius: 5px; }
+    .btn:hover { background: #18332A !important; }
+    .btn-line { background: transparent; color: #7A6540; border-color: rgba(31,61,50,0.5); border-radius: 5px; }
+    .btn-line:hover { background: rgba(31,61,50,0.08); color: #1A1714; }
+    .contact-copy .desk-still {
+      display: block;
+      width: min(100%, 280px);
+      margin-top: 28px;
+      aspect-ratio: 5 / 3;
+      object-fit: cover;
+      object-position: center 32%;
+    }
+      a.page-edit { position: fixed; z-index: 40; right: 18px; bottom: 18px; background: #1F3D32; color: #FFF9F0; font-size: 14px; font-weight: 600; text-decoration: none; padding: 10px 16px; border-radius: 5px; }
+    a.page-edit:hover { background: #18332A; }
+    .offer-panel { display: none !important; }
+    .wrap:has(#tab-automation[aria-selected="true"]) #panel-automation,
+    .wrap:has(#tab-services[aria-selected="true"]) #panel-services,
+    .wrap:has(#tab-filings[aria-selected="true"]) #panel-filings { display: block !important; }
+
+  </style>
+</head>
+<body>
+<a class="skip" href="#contact">Skip to contact</a>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="index.html" aria-label="Dominic Andreas, CPA"><svg class="wordmark" width="270" height="36" viewBox="0 0 540 72" aria-hidden="true"><text x="0" y="42" font-family="Source Serif 4, Georgia, serif" font-size="36" font-weight="600" letter-spacing="0.04em" fill="#1A1714">DOMINIC ANDREAS</text><rect x="0" y="52" width="18" height="2.5" rx="1" fill="#1F3D32"></rect><text x="24" y="58" font-family="Source Sans 3, IBM Plex Sans, sans-serif" font-size="12" font-weight="600" letter-spacing="0.22em" fill="#8A7E72">CPA</text></svg></a>
+      <nav class="nav-right" aria-label="Primary">
+        <a href="index.html#services">Services</a>
+        <a href="background.html">Background</a>
+        <a href="blog/index.html">Blog</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="band" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <p class="small">CONTACT</p>
+          <h1 id="contact-title">Tell me what you need prepared, reviewed, built, or automated</h1>
+          <p class="intro">Free 20-minute call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. <br><br>You send a short note — what you need and enough context to prepare. I'll reply to confirm timing.</p>
+          
+        </div>
+        <div class="panel">
+          <!-- Set data-email to an address before publish. Until then, Send does not open a mail draft. -->
+          <form class="contact-form" id="contact-form" data-email="hello.ai.audit@gmail.com" novalidate="">
+            <div class="form-row">
+              <div>
+                <label for="name">Name *</label>
+                <input id="name" type="text" name="name" autocomplete="name" required="">
+              </div>
+              <div>
+                <label for="org">Company / organization</label>
+                <input id="org" type="text" name="org" autocomplete="organization">
+              </div>
+            </div>
+            <label for="role">e-mail *</label>
+            <input id="role" type="text" name="role" autocomplete="organization-title">
+            <label for="interest">What you need *</label>
+            <select id="interest" name="interest" required=""><option value="" selected="" disabled="">Select one</option><option>AI and automation, governance, training, and implementation</option><option>Internal audit, SOX, and SOC support</option><option>SEC filings, close, financial reporting, and auditor liaison</option><option>Something else</option></select>
+            <label for="message">Context for the fit call</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <div class="form-actions">
+              <button class="btn" type="submit">Send</button>
+              <p class="form-status" id="form-status" role="status"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Dominic Andreas. All rights reserved.</div>
+  </footer>
+  <script>
+    (function () {
+      var form = document.getElementById("contact-form");
+      var status = document.getElementById("form-status");
+      var contactEmail = (form.getAttribute("data-email") || "").trim();
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        status.dataset.state = "";
+        status.textContent = "";
+
+        var data = new FormData(form);
+        var name = String(data.get("name") || "").trim();
+        var interest = String(data.get("interest") || "").trim();
+        if (!name || !interest) {
+          status.dataset.state = "error";
+          status.textContent = "Name and what you need are required.";
+          return;
+        }
+
+        var org = String(data.get("org") || "").trim();
+        var role = String(data.get("role") || "").trim();
+        var message = String(data.get("message") || "").trim();
+        var lines = [
+          "Name: " + name,
+          org ? "Organization: " + org : "",
+          role ? "Role: " + role : "",
+          "What you need: " + interest,
+          message ? "Note: " + message : ""
+        ].filter(Boolean).join("\n");
+
+        if (contactEmail) {
+          var subject = encodeURIComponent("Inquiry — " + interest);
+          window.location.href = "mailto:" + contactEmail + "?subject=" + subject + "&body=" + encodeURIComponent(lines);
+        }
+
+        status.textContent = "Thanks. I’ll reply shortly.";
+        form.reset();
+      });
+    })();
+  </script>
+    <script>(function(){document.addEventListener("click",function(e){var tab=e.target.closest&&e.target.closest(".offer-tab");if(!tab)return;e.preventDefault();var id=tab.getAttribute("aria-controls");document.querySelectorAll(".offer-tab").forEach(function(t){t.setAttribute("aria-selected",t.getAttribute("aria-controls")===id?"true":"false");});document.querySelectorAll(".offer-panel").forEach(function(p){p.removeAttribute("style");if(p.id===id)p.removeAttribute("hidden");else p.setAttribute("hidden","");});},true);})();</script>
+</body>
+</html>

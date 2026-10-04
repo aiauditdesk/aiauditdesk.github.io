@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- Public blog list. Source: versions/option-2/combined-index-cup-aside-live.html -->
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice notes — Dominic Andreas, CPA</title>
+  <meta name="description" content="Short notes on the file, the close, and where a tool belongs.">
+  <meta name="theme-color" content="#1F3D32">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3D32'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #1F3D32;
+      --forest-2: #18332A;
+      --ink: #1A1714;
+      --muted: #6B6256;
+      --paper: #FFFEF9;
+      --rule: #D6CCBC;
+      --clay: #1F3D32;
+      --sage: #7A6540;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--forest-2); }
+    :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+    ::selection { background: var(--forest); color: var(--paper); }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #FFFEF9;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 68px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--forest); flex: 0 0 auto; }
+    .logo svg { display: block; height: 40px; width: auto; }
+    .nav-right { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 22px; font-size: 16px; font-weight: 500; color: var(--muted); }
+    .nav-right a { transition: color .15s ease; }
+    .nav-right a:hover,
+    .nav-right a[aria-current="page"] { color: var(--ink); }
+    h1, h2 { font-family: "Source Serif 4", Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+    .kicker {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--sage);
+    }
+    .page { padding: 64px 0 96px; }
+    .sheet {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      grid-template-areas:
+        "intro cup"
+        "list list";
+      column-gap: 40px;
+      align-items: start;
+    }
+    .intro { grid-area: intro; }
+    .page h1 { font-size: clamp(40px, 5vw, 56px); line-height: 1.12; margin: 0 0 8px; }
+    .rule-dot { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; max-width: 280px; }
+    .rule-dot::before, .rule-dot::after { content: ""; height: 1px; background: var(--clay); flex: 1; }
+    .rule-dot span { width: 5px; height: 5px; border-radius: 50%; background: var(--clay); }
+    .lede { max-width: none; color: var(--muted); font-size: 18.5px; line-height: 1.55; }
+    .sample { margin-top: 16px; max-width: 68ch; font-size: 14px; color: var(--muted); }
+    .cup { grid-area: cup; margin: 28px 0 0; }
+    .cup img {
+      width: 100%;
+      height: 168px;
+      object-fit: cover;
+      object-position: center 58%;
+      border: 1px solid var(--rule);
+    }
+    .list { grid-area: list; margin-top: 28px; border-top: 1px solid var(--rule); }
+    .row {
+      display: grid;
+      grid-template-columns: 168px minmax(0, 1fr);
+      gap: 12px 28px;
+      padding: 26px 0 28px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .row time { display: block; font-variant-numeric: tabular-nums; }
+    .row .kicker { display: block; margin-top: 8px; }
+    .row h2 { font-size: clamp(26px, 3vw, 32px); line-height: 1.2; }
+    .dek { margin-top: 8px; max-width: 62ch; color: var(--muted); }
+    .more {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--forest);
+      border-bottom: 1px solid var(--clay);
+      padding-bottom: 2px;
+    }
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0 40px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    @media (max-width: 800px) {
+      .page { padding: 36px 0 64px; }
+      .sheet {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "intro"
+          "list"
+          "cup";
+      }
+      .cup { margin-top: 28px; }
+      .cup img { height: 180px; }
+      .row { grid-template-columns: 1fr; gap: 8px; }
+      .nav-right { gap: 8px 16px; font-size: 15.5px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="index.html" aria-label="Dominic Andreas, CPA"><svg class="wordmark" width="270" height="36" viewBox="0 0 540 72" aria-hidden="true"><text x="0" y="42" font-family="Source Serif 4, Georgia, serif" font-size="36" font-weight="600" letter-spacing="0.04em" fill="#1A1714">DOMINIC ANDREAS</text><rect x="0" y="52" width="18" height="2.5" rx="1" fill="#1F3D32"></rect><text x="24" y="58" font-family="Source Sans 3, IBM Plex Sans, sans-serif" font-size="12" font-weight="600" letter-spacing="0.22em" fill="#8A7E72">CPA</text></svg></a>
+      <nav class="nav-right" aria-label="Primary">
+        <a href="../index.html#services">Services</a>
+        <a href="../background.html">Background</a>
+        <a href="index.html" aria-current="page">Blog</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page">
+    <div class="wrap">
+      <div class="sheet">
+        <div class="intro">
+          <p class="kicker">Blog</p>
+          <h1>Articles and notes</h1>
+          <div class="rule-dot" aria-hidden="true"><span></span></div>
+          <p class="lede">For educational purposes only. Not advice.</p>
+        </div>
+        <figure class="cup">
+          <img src="../images/mug-and-morning.png" alt="A ceramic mug on a wooden windowsill, with trees beyond the glass.">
+        </figure>
+        <div class="list">
+          <article class="row">
+            <div>
+              <time datetime="2026-10-03">Oct 2026</time>
+              <span class="kicker">No. 03</span>
+            </div>
+            <div>
+              <h2><a href="posts/four-layers-of-controls-and-audits.html">Four layers of controls &amp; audits</a></h2>
+              <p class="dek">Familiar to auditors. Now on the table for frontier models.</p>
+              <a class="more" href="posts/four-layers-of-controls-and-audits.html">Read the note</a>
+            </div>
+          </article>
+          <article class="row">
+            <div>
+              <time datetime="2026-10-03">Oct 2026</time>
+              <span class="kicker">No. 02</span>
+            </div>
+            <div>
+              <h2><a href="posts/always-on-agent-teams.html">Always-on agent teams</a></h2>
+              <p class="dek">Guided agents that keep delivery moving.</p>
+              <a class="more" href="posts/always-on-agent-teams.html">Read the note</a>
+            </div>
+          </article>
+          <article class="row">
+            <div>
+              <time datetime="2026-09-12">Sep 2026</time>
+              <span class="kicker">No. 01</span>
+            </div>
+            <div>
+              <h2><a href="posts/grok-bot-101.html">Notes from Grok Bot 101</a></h2>
+              <p class="dek">Brief notes from the public Grok Bot Galaxy session “Grok Bot 101” (Day 1), as presented, including first-time setup.&nbsp;<br></p>
+              <a class="more" href="posts/grok-bot-101.html">Read the note</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">© 2026 Dominic Andreas. All rights reserved.</div>
+  </footer>
+  </body></html>
