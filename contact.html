@@ -146,7 +146,8 @@
           window.location.href = "mailto:" + contactEmail + "?subject=" + subject + "&body=" + encodeURIComponent(lines);
         }
 
-        status.textContent = "Thanks. I’ll reply shortly.";
+        status.dataset.state = "error";
+        status.textContent = "Something went wrong on this form. Email hello.ai.audit@gmail.com directly.";
         form.reset();
       });
     })();
