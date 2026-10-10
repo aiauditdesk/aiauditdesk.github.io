@@ -79,6 +79,32 @@
     .has-portrait { position: relative; overflow: hidden; }
     .has-portrait > .wrap { position: relative; z-index: 1; }
     .creds-col { position: relative; }
+    .creds-col > .small {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .creds-col .creds li span:first-child {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .creds-col .cred-ico {
+      width: 21px;
+      height: 21px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      overflow: visible;
+      stroke: #7A6540;
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .creds-col .cred-ico .cred-check {
+      stroke-width: 2.2;
+    }
+    .creds-col > .small .cred-ico { margin-top: 0; }
     .creds-photo { position: relative; }
     .creds-photo .creds { position: relative; z-index: 1; }
     .portrait {
@@ -180,14 +206,14 @@
         <div class="bio">
           <p class="small">Background</p>
           <h1 class="page-title" id="about-title">Audit experience and operations experience — in one seat</h1>
-          <p>I have spent a decade-plus on both sides of the file: risk-based audit, internal controls, financial reporting, and quality work at large global and national public-accounting firms, and in-house internal audit for public companies. On the firm side that meant integrated audits of SEC filings (10-Qs and 10-Ks), financial statement audits, SOC 1 Type 2 examinations, model validations, and more. Inside the company it meant financial, operational, IT, and compliance audits.<br><br>Part of my work has always been on how teams get things done: efficiencies, governed use of tools, standardized approaches, and broader rollouts. I have led adoption of AI in audit and advisory work across industries, trained teams, and put new tools into governed, reviewable workflows working cross-functionally with innovative, practical solutions. Leaders get one seat on the project, with professional standards, quality, and risk in view.&nbsp;</p>
+          <p>For over a decade, I've worked on both sides of the file — external audit at leading global and national public accounting firms, and in-house internal audit for publicly traded companies. On the firm side that included integrated audits of SEC filings (10-Qs and 10-Ks), financial statement audits, SOC 1 Type 2 examinations, model validations, and more. Inside the company it meant financial, operational, IT, and compliance audits.<br><br>The work has always included how teams get things done: efficiencies, governed tools, standard approaches, and broader rollouts. I have led AI adoption in audit and advisory work across industries, trained large teams, and put new tools into governed, reviewable workflows while working cross-functionally across the United States and abroad.&nbsp;Leaders receive one seat on the project, with professional standards, quality, and risk in view.&nbsp;</p>
         </div>
         <div class="creds-col">
-          <p class="small">Credentials</p>
+          <p class="small"><svg class="cred-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.2l7.4 3.2v5.6c0 4.6-3.1 8.6-7.4 9.8-4.3-1.2-7.4-5.2-7.4-9.8V6.4L12 3.2z"></path><path class="cred-check" d="M8 12.3l2.8 2.8 5.4-5.8"></path></svg>Credentials</p>
           <ul class="creds">
-            <li><span>License</span><span>Certified Public Accountant</span></li>
-            <li><span>Education</span><span>M.S., Golden Gate University (High honors)<br>B.A., University of California, Berkeley</span></li>
-            <li><span>industries</span><span>Financial services, technology, consumer products and goods, nonprofit, government, digital advertising, and healthcare.</span></li>
+            <li><span><svg class="cred-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5h6.2L18 8.3V19.5H8z"></path><path d="M14.2 4.5V8.3H18"></path><path d="M10.2 12.2h5.2M10.2 15.2h3.6"></path></svg>License</span><span>Certified Public Accountant</span></li>
+            <li><span><svg class="cred-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.4 10.2L12 5.4l8.6 4.8L12 15 3.4 10.2z"></path><path d="M7.2 12.2v3.6c2.2 1.7 7.4 1.7 9.6 0v-3.6"></path><path d="M20.6 10.2v5.4"></path></svg>Education</span><span>M.S., Golden Gate University (High honors)<br>B.A., University of California, Berkeley</span></li>
+            <li><span><svg class="cred-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.4" y="8.2" width="17.2" height="11.2" rx="1.4"></rect><path d="M8.2 8.2V6.6A1.6 1.6 0 0 1 9.8 5h4.4a1.6 1.6 0 0 1 1.6 1.6v1.6"></path><path d="M3.4 13h17.2"></path></svg>industries</span><span>Financial services, technology, consumer products and goods, nonprofit, government, digital advertising, and healthcare. Deep experience across regulated and complex industries.</span></li>
             <li><span>Public accounting</span><span>Experience spans early-stage and growth companies through large organizations with multi-billion-dollar scale across public, private, nonprofit, and governmental entities.<br>SEC / PCAOB, SOX / ICFR, SOC, FDICIA, and more.</span></li>
             <li><span>In-house IA</span><span>Financial, operational, IT, and compliance</span></li>
           </ul>
