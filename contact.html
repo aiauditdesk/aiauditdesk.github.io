@@ -78,6 +78,37 @@
     }
       a.page-edit { position: fixed; z-index: 40; right: 18px; bottom: 18px; background: #1F3D32; color: #FFF9F0; font-size: 14px; font-weight: 600; text-decoration: none; padding: 10px 16px; border-radius: 5px; }
     a.page-edit:hover { background: #18332A; }
+    .contact-copy .intro { max-width: 62ch; }
+    .contact-hero { margin-bottom: 20px; }
+    .booking-block { margin: 0 0 36px; }
+    .offer-line {
+      margin: 0 0 16px;
+      max-width: 62ch;
+      font-size: 16.5px;
+      line-height: 1.55;
+      color: #3A352E;
+    }
+    .write-in {
+      border-top: 1px solid var(--rule);
+      padding-top: 40px;
+      max-width: 640px;
+    }
+    .write-in h2 {
+      font-size: clamp(24px, 3vw, 32px);
+      margin: 8px 0 14px;
+    }
+    .write-in .email-link {
+      color: #1F3D32;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .write-in ul {
+      margin: 14px 0 18px 1.2em;
+      color: var(--muted);
+    }
+    .write-in li + li { margin-top: 6px; }
+    .write-in .reply-note { color: var(--muted); font-size: 15px; }
     .offer-panel { display: none !important; }
     .wrap:has(#tab-automation[aria-selected="true"]) #panel-automation,
     .wrap:has(#tab-services[aria-selected="true"]) #panel-services,
@@ -101,37 +132,28 @@
 
   <main>
     <section class="band" id="contact" aria-labelledby="contact-title">
-      <div class="wrap contact-grid">
-        <div class="contact-copy">
+      <div class="wrap">
+        <div class="contact-copy contact-hero">
           <p class="small">CONTACT</p>
-          <h1 id="contact-title">Tell me what you need prepared, reviewed, built, or automated</h1>
-          <p class="intro">Free 20-minute call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. <br><br>You send a short note — what you need and enough context to prepare. I'll reply to confirm timing.</p>
-          
+          <h1 id="contact-title">Book a free 20-minute call</h1>
+          <p class="intro">Free call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. Pick a time that works for you — you’ll get a calendar invite with a Google Meet link.</p>
         </div>
-        <div class="panel">
-          <!-- Set data-email to an address before publish. Until then, Send does not open a mail draft. -->
-          <form class="contact-form" id="contact-form" data-email="hello.ai.audit@gmail.com" novalidate="">
-            <div class="form-row">
-              <div>
-                <label for="name">Name *</label>
-                <input id="name" type="text" name="name" autocomplete="name" required="">
-              </div>
-              <div>
-                <label for="org">Company / organization</label>
-                <input id="org" type="text" name="org" autocomplete="organization">
-              </div>
-            </div>
-            <label for="role">e-mail *</label>
-            <input id="role" type="text" name="role" autocomplete="organization-title">
-            <label for="interest">What you need *</label>
-            <select id="interest" name="interest" required=""><option value="" selected="" disabled="">Select one</option><option>AI and automation, governance, training, and implementation</option><option>Internal audit, SOX, and SOC support</option><option>SEC filings, close, financial reporting, and auditor liaison</option><option>Something else</option></select>
-            <label for="message">Context for the fit call</label>
-            <textarea id="message" name="message" rows="5"></textarea>
-            <div class="form-actions">
-              <button class="btn" type="submit">Send</button>
-              <p class="form-status" id="form-status" role="status"></p>
-            </div>
-          </form>
+
+        <div class="booking-block">
+          <p class="offer-line">Tell me what you need prepared, reviewed, built, or automated.</p>
+          <a class="btn" href="https://calendar.app.google/h16Y8WJkNjMLpuC16" target="_blank" rel="noopener">Book a 20-minute call</a>
+        </div>
+
+        <div class="write-in" id="write-in">
+          <p class="small">OR EMAIL</p>
+          <h2>Prefer to write in?</h2>
+          <p>Email <a class="email-link" href="mailto:hello.ai.audit@gmail.com">hello.ai.audit@gmail.com</a> with:</p>
+          <ul>
+            <li>Your name and company</li>
+            <li>What you’d like help with</li>
+            <li>Your timeline and best way to reach you</li>
+          </ul>
+          <p class="reply-note">I reply within one business day.</p>
         </div>
       </div>
     </section>
@@ -140,48 +162,6 @@
   <footer>
     <div class="wrap">© 2026 Dominic Andreas. All rights reserved.</div>
   </footer>
-  <script>
-    (function () {
-      var form = document.getElementById("contact-form");
-      var status = document.getElementById("form-status");
-      var contactEmail = (form.getAttribute("data-email") || "").trim();
-
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        status.dataset.state = "";
-        status.textContent = "";
-
-        var data = new FormData(form);
-        var name = String(data.get("name") || "").trim();
-        var interest = String(data.get("interest") || "").trim();
-        if (!name || !interest) {
-          status.dataset.state = "error";
-          status.textContent = "Name and what you need are required.";
-          return;
-        }
-
-        var org = String(data.get("org") || "").trim();
-        var role = String(data.get("role") || "").trim();
-        var message = String(data.get("message") || "").trim();
-        var lines = [
-          "Name: " + name,
-          org ? "Organization: " + org : "",
-          role ? "Role: " + role : "",
-          "What you need: " + interest,
-          message ? "Note: " + message : ""
-        ].filter(Boolean).join("\n");
-
-        if (contactEmail) {
-          var subject = encodeURIComponent("Inquiry — " + interest);
-          window.location.href = "mailto:" + contactEmail + "?subject=" + subject + "&body=" + encodeURIComponent(lines);
-        }
-
-        status.dataset.state = "error";
-        status.textContent = "Something went wrong on this form. Email hello.ai.audit@gmail.com directly.";
-        form.reset();
-      });
-    })();
-  </script>
     <script>(function(){document.addEventListener("click",function(e){var tab=e.target.closest&&e.target.closest(".offer-tab");if(!tab)return;e.preventDefault();var id=tab.getAttribute("aria-controls");document.querySelectorAll(".offer-tab").forEach(function(t){t.setAttribute("aria-selected",t.getAttribute("aria-controls")===id?"true":"false");});document.querySelectorAll(".offer-panel").forEach(function(p){p.removeAttribute("style");if(p.id===id)p.removeAttribute("hidden");else p.setAttribute("hidden","");});},true);})();</script>
 </body>
 </html>
