@@ -79,8 +79,14 @@
       a.page-edit { position: fixed; z-index: 40; right: 18px; bottom: 18px; background: #1F3D32; color: #FFF9F0; font-size: 14px; font-weight: 600; text-decoration: none; padding: 10px 16px; border-radius: 5px; }
     a.page-edit:hover { background: #18332A; }
     .contact-copy .intro { max-width: 62ch; }
+    #contact .wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      column-gap: 48px;
+      align-items: start;
+    }
     .contact-hero { margin-bottom: 20px; }
-    .booking-block { margin: 0 0 36px; }
+    .booking-block { margin: 0; }
     .offer-line {
       margin: 0 0 16px;
       max-width: 62ch;
@@ -89,9 +95,25 @@
       color: #3A352E;
     }
     .write-in {
-      border-top: 1px solid var(--rule);
-      padding-top: 40px;
-      max-width: 640px;
+      grid-column: 2;
+      grid-row: 1 / span 2;
+      border-top: none;
+      border-left: 1px solid var(--rule);
+      padding-top: 0;
+      padding-left: 40px;
+      max-width: none;
+    }
+    @media (max-width: 800px) {
+      #contact .wrap { grid-template-columns: 1fr; }
+      .write-in {
+        grid-column: 1;
+        grid-row: auto;
+        border-left: none;
+        border-top: 1px solid var(--rule);
+        padding-left: 0;
+        padding-top: 40px;
+        margin-top: 36px;
+      }
     }
     .write-in h2 {
       font-size: clamp(24px, 3vw, 32px);
@@ -136,7 +158,7 @@
         <div class="contact-copy contact-hero">
           <p class="small">CONTACT</p>
           <h1 id="contact-title">Book a free 20-minute call</h1>
-          <p class="intro">Free 20-minute phone call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. Pick a time that works for you — you’ll get a calendar invite with a Google Meet link.</p>
+          <p class="intro">Free phone call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. Pick a time that works for you — you’ll get a calendar invite with a Google Meet link.</p>
         </div>
 
         <div class="booking-block">
@@ -160,7 +182,7 @@
   </main>
 
   <footer>
-    <div class="wrap">© 2026 Dominic Andreas. All rights reserved.</div>
+    <div class="wrap">I do not issue attest opinions. I support the systems, processes, controls and files behind them. Blog content is for educational purposes only and is not advice.<br>© 2026 Dominic Andreas. All rights reserved.</div>
   </footer>
     <script>(function(){document.addEventListener("click",function(e){var tab=e.target.closest&&e.target.closest(".offer-tab");if(!tab)return;e.preventDefault();var id=tab.getAttribute("aria-controls");document.querySelectorAll(".offer-tab").forEach(function(t){t.setAttribute("aria-selected",t.getAttribute("aria-controls")===id?"true":"false");});document.querySelectorAll(".offer-panel").forEach(function(p){p.removeAttribute("style");if(p.id===id)p.removeAttribute("hidden");else p.setAttribute("hidden","");});},true);})();</script>
 </body>

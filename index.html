@@ -126,6 +126,8 @@
       line-height: 1.55;
       color: #6B6256;
     }
+    .hero-top .lead:empty,
+    .hero-top .lead:has(> br:only-child) { display: none; }
     .offer-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 28px; }
     .offer-tab {
       font-family: "Source Serif 4", Georgia, serif !important;
@@ -186,18 +188,109 @@
     #engagements .close { margin-top: 16px; }
     #engagements .small { margin: 0 0 10px; }
     #engagements h2 { margin: 0 0 8px; }
-    #engagements .stack { border-top: 0; }
-    #engagements .item:first-child { padding-top: 10px; }
+    #engagements .stack {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      border-top: 0;
+      margin-top: 0;
+    }
+    #engagements .item:first-child { padding-top: 20px; }
     #engagements .item {
-      grid-template-columns: 72px minmax(0, 1fr);
-      row-gap: 4px;
-      column-gap: 20px;
-      border-bottom: 0;
-      padding: 10px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      background: #FFFFFF;
+      border: 1px solid #D6CCBC;
+      border-radius: 6px;
+      padding: 20px 18px;
+      row-gap: 8px;
+      column-gap: 0;
+      grid-template-columns: none;
+      border-bottom: 1px solid #D6CCBC;
     }
     #engagements .item h3,
-    #engagements .item p { grid-column: 2; }
-    #engagements .item h3 { line-height: 1.2; }
+    #engagements .item p { grid-column: auto; margin: 0; }
+    #engagements .item h3 { font-size: 18px; line-height: 1.25; color: #1A1714; }
+    #engagements .item p { font-size: 15px; line-height: 1.5; color: #6B6256; }
+    #engagements .item .n {
+      display: block;
+      width: auto;
+      height: auto;
+      border-radius: 0;
+      background: none;
+      color: #7A6540;
+      font-family: "IBM Plex Sans", system-ui, sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      padding: 0;
+    }
+    #engagements .eng-cta { margin-top: 22px; }
+    @media (max-width: 900px) {
+      #engagements .stack { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      #engagements .stack { grid-template-columns: 1fr; }
+    }
+
+    footer.site-foot {
+      background: #1F3D32;
+      color: #FFF9F0;
+      border-top: 0;
+      padding: 56px 0 32px;
+      font-size: 15px;
+    }
+    footer.site-foot .wrap {
+      font-size: 15px;
+      color: #FFF9F0;
+    }
+    footer.site-foot .foot-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    footer.site-foot h3 {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 16px !important;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+      color: #FFF9F0;
+      margin: 0 0 12px;
+    }
+    footer.site-foot p,
+    footer.site-foot li {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 15px !important;
+      line-height: 1.55;
+      color: #FFF9F0;
+      margin: 0;
+    }
+    footer.site-foot .foot-brand p { max-width: 36ch; }
+    footer.site-foot ul { list-style: none; padding: 0; margin: 0; }
+    footer.site-foot li + li { margin-top: 8px; }
+    footer.site-foot a {
+      color: #FFF9F0;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer.site-foot a:hover { color: #F0E6D4; }
+    footer.site-foot .legal {
+      border-top: 1px solid #2F4F43;
+      margin-top: 36px;
+      padding-top: 18px;
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 13px !important;
+      line-height: 1.55;
+      color: #E7DDCB;
+    }
+    @media (max-width: 800px) {
+      footer.site-foot .foot-grid { grid-template-columns: 1fr; gap: 28px; }
+    }
     .offer-panel .band-head { grid-template-columns: 1fr; }
     .offer-panel .band-head .intro { max-width: none; }
     .hero {
@@ -277,14 +370,13 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="wrap">
-        <p class="small hero-kicker">FRACTIONAL AI LEAD · certified public accountant<br></p>
+        <p class="small hero-kicker">FRACTIONAL AI LEAD · certified public accountant</p>
         <h1 id="hero-title">AI-first leadership that fuels growth — when you need it, for as long as you need it.</h1>
         <div class="hero-top">
-          <p class="lead">Fractional leadership and targeted support for leaders at startups, small and medium-sized businesses, and other organizations. <br><br>Supporting the following core areas:<br>• AI and automation operations and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting</p><p class="lead">I do not issue attest opinions. I support the robust systems, processes, controls, and files behind them — so you get the time back and know it'll be taken care of.</p>
-        </div>
+          <p class="lead">Fractional leadership and targeted support for leaders at startups, small and medium-sized businesses, and other organizations.<br><br>I support four core areas:<br>• AI and automation advisory, operations, and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting<br><br>AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p></div>
         <div class="cta-row">
-          <a class="btn btn-line" href="#services">See the services</a><a class="btn" href="contact.html">Book a fit call</a>
-          
+          <a class="btn btn-line" href="#services">See the services</a>
+          <a class="btn" href="contact.html">Book a fit call</a>
         </div>
         <div class="strip" role="list">
           <div class="cell" role="listitem"><b>CPA</b><span>Licensed Certified Public Accountant</span></div>
@@ -298,7 +390,7 @@
     <section class="band" id="services" aria-labelledby="services-title">
       <div class="wrap">
         <p class="small offer-kicker"><span style="font-size: 13px;">Services</span></p>
-        <p class="offer-note">Select each below for the scope</p>
+        <p class="offer-note">Click each service to see how I support it</p>
         <div class="offer-tabs" role="tablist" aria-label="Services">
           <button type="button" class="offer-tab" role="tab" id="tab-automation" aria-selected="true" aria-controls="panel-automation"><span class="tab-n">01</span>AI and automation</button>
           <button type="button" class="offer-tab" role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services"><span class="tab-n">02</span>Audit support and controls</button>
@@ -315,7 +407,7 @@
           <article class="item">
             <div class="n">01</div>
             <h3>Internal audits and compliance</h3>
-            <p>Risk-based financial, operational, information technology (IT), and compliance audits. Planning through reporting, with findings that are specific, evidence-based, and usable.<br>• Walkthroughs, control design assessment, operating-effectiveness testing, deficiency evaluation, and remediation tracking. Structured issue logs and follow-up, with an audit trail.</p>
+            <p>Risk-based financial, operational, information technology (IT), and compliance audits. Planning through reporting, with findings that are specific, evidence-based, and usable.</p>
           </article>
           <article class="item">
             <div class="n">02</div>
@@ -413,12 +505,12 @@
     <section class="band" id="engagements" aria-labelledby="engagements-title">
       <div class="wrap">
         <p class="small">How engagements work</p>
-        <h2 id="engagements-title">Fit call → written scope → deliver</h2>
+        <h2 id="engagements-title">Call → scope → start → delivered</h2>
         <div class="stack">
           <article class="item">
             <div class="n">01</div>
-            <h3>Fit call</h3>
-            <p>Align on what you need help with and priorities.</p>
+            <h3>Free 20-minute call</h3>
+            <p>Align on goals, challenges, and priorities.</p>
           </article>
           <article class="item">
             <div class="n">02</div>
@@ -427,23 +519,52 @@
           </article>
           <article class="item">
             <div class="n">03</div>
-            <h3>Set up access</h3>
-            <p>Set up the agreed access so remote work can start. Straightforward, with no unnecessary steps.</p>
+            <h3>Get set up&nbsp;</h3>
+            <p>Secure file sharing or least-privilege access. Remote, with no unnecessary steps.</p>
           </article>
           <article class="item">
             <div class="n">04</div>
-            <h3>Deliver</h3>
-            <p>Complete the work with 1–2 revision rounds, delivered with professional standards, quality, and risk in view.</p>
+            <h3>Delivered</h3>
+            <p>With 1–2 revision rounds. Delivered with professional standards, quality, and risk in view.</p>
           </article>
         </div>
-        <p class="close">Book a free call to talk through scope, fit, and where to start.</p>
+        <div class="cta-row eng-cta">
+          <a class="btn" href="contact.html">Book a fit call</a>
+        </div>
+        
       </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="wrap">© 2026 Dominic Andreas. All rights reserved.</div>
+  <footer class="site-foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <h3>Dominic Andreas, CPA</h3>
+          <p>Fractional AI lead and CPA for growing businesses and organizations. AI adoption and integration, plus internal audit, SOX, SOC and reporting support.</p>
+        </div>
+        <div class="foot-pages">
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="background.html">Background</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="foot-contact">
+          <h3>Contact</h3>
+          <ul>
+            <li><a href="mailto:hello.ai.audit@gmail.com">hello.ai.audit@gmail.com</a></li>
+            <li>Replies within one business day</li>
+            <li><a href="contact.html">Book a time</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">I do not issue attest opinions. I support the systems, processes, controls and files behind them. Blog content is for educational purposes only and is not advice.<br>© 2026 Dominic Andreas. All rights reserved.</div>
+    </div>
   </footer>
     <script>(function(){document.addEventListener("click",function(e){var tab=e.target.closest&&e.target.closest(".offer-tab");if(!tab)return;e.preventDefault();var id=tab.getAttribute("aria-controls");document.querySelectorAll(".offer-tab").forEach(function(t){t.setAttribute("aria-selected",t.getAttribute("aria-controls")===id?"true":"false");});document.querySelectorAll(".offer-panel").forEach(function(p){p.removeAttribute("style");if(p.id===id)p.removeAttribute("hidden");else p.setAttribute("hidden","");});},true);})();</script>
 </body>
