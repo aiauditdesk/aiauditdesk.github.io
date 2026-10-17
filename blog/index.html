@@ -110,10 +110,7 @@
     }
     .intro { grid-area: intro; }
     .page h1 { font-size: clamp(40px, 5vw, 56px); line-height: 1.12; margin: 0 0 8px; }
-    .rule-dot { display: flex; align-items: center; gap: 12px; margin: 0 0 18px; max-width: 280px; }
-    .rule-dot::before, .rule-dot::after { content: ""; height: 1px; background: var(--clay); flex: 1; }
-    .rule-dot span { width: 5px; height: 5px; border-radius: 50%; background: var(--clay); }
-    .lede { max-width: none; color: var(--muted); font-size: 18.5px; line-height: 1.55; }
+    .lede { max-width: none; color: var(--muted); font-size: 16px; line-height: 1.55; }
     .sample { margin-top: 16px; max-width: 68ch; font-size: 14px; color: var(--muted); }
     .cup { grid-area: cup; margin: 28px 0 0; }
     .cup img {
@@ -184,9 +181,8 @@
       <div class="sheet">
         <div class="intro">
           <p class="kicker">Blog</p>
-          <h1>Articles and notes</h1>
-          <div class="rule-dot" aria-hidden="true"><span></span></div>
-          <p class="lede">For educational purposes only. Not advice.</p>
+          <h1>Articles and practice notes</h1>
+          <p class="lede" style="font-size: 15px;"><br></p>
         </div>
         <figure class="cup">
           <img src="../images/mug-and-morning.png" alt="A ceramic mug on a wooden windowsill, with trees beyond the glass.">
@@ -230,6 +226,6 @@
     </div>
   </main>
   <footer>
-    <div class="wrap">© 2026 Dominic Andreas. All rights reserved.</div>
+    <div class="wrap">I do not issue attest opinions. I support the systems, processes, controls and files behind them. Blog content is for educational purposes only and is not advice.<br>© 2026 Dominic Andreas. All rights reserved.</div>
   </footer>
   </body></html>
