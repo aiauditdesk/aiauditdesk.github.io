@@ -155,9 +155,6 @@
       padding: 36px 36px 32px;
     }
     .mast h1 { font-size: clamp(42px, 5.5vw, 64px); line-height: 1.12; font-weight: 300; max-width: 10ch; }
-    .rule-dot { display: flex; align-items: center; gap: 12px; margin: 20px 0 16px; max-width: 420px; }
-    .rule-dot::before, .rule-dot::after { content: ""; height: 1px; background: var(--clay); flex: 1; }
-    .rule-dot span { width: 5px; height: 5px; border-radius: 50%; background: var(--clay); }
     .mast .lede { max-width: 36ch; }
     .mast img { width: 100%; height: 230px; object-fit: cover; object-position: center 62%; }
     .issues { margin-top: 28px; border-top: 1px solid var(--rule); }
@@ -181,7 +178,7 @@
     .essay ul { margin: 12px 0 0; padding-left: 1.2em; max-width: var(--measure); font-size: 18px; line-height: 1.65; }
     .essay li { margin-top: 8px; }
     .essay .body-one a { color: var(--forest); font-weight: 600; text-decoration: underline; }
-    .essay figure { margin: 18px 0 8px; max-width: var(--measure); }
+    .essay figure { margin: 18px 0 8px; max-width: 540px; }
     .essay figure img { width: 100%; height: auto; border: 1px solid var(--rule); }
     .sign { margin-top: 36px; }
     @media (max-width: 800px) {
@@ -211,7 +208,6 @@
       <div class="mast-slim">
         <a class="back" href="../index.html">All issues</a>
         <p class="kicker" style="margin-top:22px"><time datetime="2026-10-20">No. 04 · october 2026</time></p>
-        <div class="rule-dot" aria-hidden="true"><span></span></div>
       </div>
       <h1>What are people building with AI, and how can it help them save money?</h1>
       <div class="body-one">
@@ -242,6 +238,9 @@
         <p>I can evaluate software needs, help you decide whether to build or buy, and create custom tools where they fit better than traditional SaaS, or consolidate tools for potential cost savings. I stay close to the problem and can go line by line through your financials or workflows to find opportunities. For internal tools, I can assess and prototype options with a short turnaround, with a testing and feedback round built in.</p>
         <p>I'm happy to support you on this as a standalone project or as part of fractional AI lead work, and I'd like to hear about your goals, challenges, and project ideas. Book a free 20-minute call: <a href="https://aiauditdesk.github.io/contact.html">https://aiauditdesk.github.io/contact.html</a></p>
         <p><b>Source:</b><br>Lovable, The Build Economy (June 2026): <a href="https://thebuildeconomy.lovable.app/">https://thebuildeconomy.lovable.app/</a></p>
+        <figure>
+          <img src="business-ai-savings-work-with-me.jpg" alt="Work with me as your fractional AI lead: evaluate software, build or buy, custom tools, consolidate SaaS, and prototype internal tools.">
+        </figure>
       </div>
       <p class="end" style="margin-top:28px"><br></p>
     </article>
