@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- Public post. Source: versions/option-2/internal-tools-smbs-live.html -->
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>14 internal tools worth considering — Dominic Andreas, CPA</title>
+  <meta name="description" content="If a software renewal is coming up, here's something worth looking at before you sign.">
+  <meta name="theme-color" content="#1F3D32">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3D32'/%3E%3C/svg%3E">
+  <style>
+    @font-face {
+      font-family: "Merriweather Light";
+      src: url("../../fonts/Merriweather-Light.ttf") format("truetype");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Merriweather Light";
+      src: url("../../fonts/Merriweather-LightItalic.ttf") format("truetype");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: Carlito;
+      src: url("../../fonts/Carlito-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: Carlito;
+      src: url("../../fonts/Carlito-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <style>
+
+    :root {
+      --forest: #1F3D32;
+      --forest-2: #18332A;
+      --ink: #1A1714;
+      --muted: #6B6256;
+      --paper: #FFFEF9;
+      --rule: #D6CCBC;
+      --clay: #1F3D32;
+      --panel: #FFFEF9;
+      --sage: #7A6540;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Carlito, "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--forest-2); }
+    :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+    ::selection { background: var(--forest); color: var(--paper); }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #FFFEF9;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 68px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--forest); flex: 0 0 auto; }
+    .logo svg, .logo img.wordmark, .logo img.wordmark-da { display: block; height: 40px; width: auto; max-width: none; flex-shrink: 0; }
+    .logo .lockup {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo .lockup-name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .logo .lockup-word,
+    .logo .logo-cred {
+      font-family: "Montserrat", "Century Gothic", sans-serif !important;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .logo .lockup-word {
+      font-size: 15px;
+      letter-spacing: 0.2em;
+      color: #1A1714;
+    }
+    .logo .logo-cred {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      color: #46382A;
+    }
+    .nav-right { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 22px; font-size: 16px; font-weight: 500; color: var(--muted); }
+    .nav-right a { transition: color .15s ease; }
+    .nav-right a:hover,
+    .nav-right a[aria-current="page"] { color: var(--ink); }
+    h1, h2, h3 { font-family: "Merriweather Light", Georgia, serif; font-weight: 300; letter-spacing: 0; }
+    .kicker {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--sage);
+    }
+    .page { padding: 64px 0 96px; }
+    .lede { max-width: var(--measure, 46rem); color: var(--muted); font-size: 18.5px; line-height: 1.55; }
+    .sample { margin-top: 18px; max-width: 68ch; font-size: 14px; color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0 40px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .back { display: inline-block; font-size: 14.5px; font-weight: 600; color: var(--forest); }
+    .byline { margin-top: 16px; font-size: 14.5px; color: var(--muted); }
+    @media (max-width: 720px) {
+      .page { padding: 36px 0 64px; }
+      .nav-right { gap: 8px 16px; font-size: 15.5px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    .nav-right { font-size: 16px; }
+    .mast {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+      gap: 36px;
+      align-items: end;
+      background: #F2EDE3;
+      padding: 36px 36px 32px;
+    }
+    .mast h1 { font-size: clamp(42px, 5.5vw, 64px); line-height: 1.12; font-weight: 300; max-width: 10ch; }
+    .mast .lede { max-width: 36ch; }
+    .mast img { width: 100%; height: 230px; object-fit: cover; object-position: center 62%; }
+    .issues { margin-top: 28px; border-top: 1px solid var(--rule); }
+    .issue {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .issue .num { font-weight: 700; color: var(--forest); letter-spacing: 0.04em; }
+    .issue time { display: block; margin-top: 6px; color: var(--muted); font-size: 14.5px; }
+    .issue h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.22; font-weight: 300; }
+    .issue .dek { margin-top: 8px; color: var(--muted); max-width: 62ch; }
+    .mast-slim { max-width: 760px; margin-bottom: 28px; }
+    .mast-slim .series { font-size: 15px; font-weight: 700; color: var(--forest); }
+    .essay { --measure: 46rem; }
+    .essay h1 { font-size: clamp(36px, 5vw, 52px); line-height: 1.22; font-weight: 300; margin: 8px 0 12px; max-width: var(--measure); }
+    .essay h2 { font-size: 28px; line-height: 1.25; font-weight: 300; margin: 32px 0 0; }
+    .essay p { margin-top: 12px; font-size: 18px; line-height: 1.65; max-width: var(--measure); }
+    .essay ul, .essay ol { margin: 12px 0 0; padding-left: 1.2em; max-width: var(--measure); font-size: 18px; line-height: 1.65; }
+    .essay li { margin-top: 8px; }
+    .essay .body-one a { color: var(--forest); font-weight: 600; text-decoration: underline; }
+    .essay figure { margin: 18px 0 8px; max-width: 540px; }
+    .essay figure img { width: 100%; height: auto; border: 1px solid var(--rule); }
+    .sign { margin-top: 36px; }
+    @media (max-width: 800px) {
+      .mast, .issue { grid-template-columns: 1fr; }
+      .mast { padding: 24px 20px; }
+      .mast img { height: 200px; }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="../../index.html" aria-label="Dominic Andreas, CPA"><span class="lockup"><img class="wordmark-da" src="../../da-monogram.png" alt="" height="40"><span class="lockup-name"><span class="lockup-word">DOMINIC ANDREAS</span><span class="logo-cred">CPA</span></span></span></a>
+
+      <nav class="nav-right" aria-label="Primary">
+        <a href="../../index.html#services">Services</a>
+        <a href="../../background.html">Background</a>
+        <a href="../index.html" aria-current="page">Blog</a>
+        <a href="../../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page">
+
+    <article class="wrap essay">
+      <div class="mast-slim">
+        <a class="back" href="../index.html">All issues</a>
+        <p class="kicker" style="margin-top:22px"><time datetime="2026-10-23">No. 05 · october 2026</time></p>
+      </div>
+      <h1>If a software renewal is coming up, here's something worth looking at before you sign.</h1>
+      <div class="body-one">
+        <figure>
+          <img src="internal-tools-smbs.jpg" alt="14 internal tools worth considering before your next software renewal. The top 14 from a list of 62, for small and medium-sized business owners.">
+        </figure>
+        <p class="lede">In my last post, I looked at what people are building with AI. This one takes a closer look at one category: internal tools, sometimes called micro-SaaS.</p>
+        <p>Something is shifting in how businesses get software. AI has made it faster to build a tool around the way a business actually works. At the same time, a lot of software is priced per seat, and those costs can grow as a team grows. So more companies are asking a fair question: for some tools, does building make more sense than buying?</p>
+        <p>According to Lovable's published customer stories, Atonom reported going from about $40,000 a year on its CRM to about $1,200, and O3 World reported saving about $35,000 a year by building its own resource planning app. Results vary, so it's worth running the numbers first.</p>
+        <figure>
+          <img src="internal-tools-smbs-savings.jpg" alt="Reported savings from Lovable customer stories: Atonom from about $40,000 a year on CRM to about $1,200, and O3 World about $35,000 a year after replacing a resource planning platform.">
+        </figure>
+        <p>I put together and ranked a list of 62 internal tools for small and medium-sized businesses. They span finance, sales, operations, compliance, and HR. The top 14 are in this carousel: <a href="top-14-internal-tools.pdf">Top 14 of 62 (PDF)</a>.</p>
+        <p>For some, building has meant lower software costs and tools that fit better. Not everything needs replacing. Some tools can fill a gap or complement software you already pay for, and what makes sense depends on how your team works. These may be worth a look, especially before a renewal.</p>
+        <p>Owners often weigh build vs. buy, much like outsourcing vs. in-house or leasing vs. buying. Software companies compete for that decision, and a good one can win it on value.</p>
+        <p>What recurring task costs your team the most time or money?</p>
+        <p>Would a custom tool help, or does your current software already cover it?</p>
+        <p>What data would it touch, and should IT be involved?</p>
+        <p>Who will own it: keep it secure, fix it, and update it when things change?</p>
+        <p>A bit about me: I'm a CPA and fractional AI lead with a background in audit and SEC reporting. I've been using AI since 2022, and I build with it every day, including custom internal tools. Coming from finance, I typically start with the numbers: what a tool costs, what it could save, and whether it's worth building at all. You stay in charge of the decisions. I help you make them and build what you choose.</p>
+        <p>If you have one or two in mind, I can help with the numbers, the build, the roll out, or just the parts you need.</p>
+        <p>Here's how I work: We scope it together, including which features matter most. I build a prototype, test it and refine it. Then we walk through it, and if you'd like, we check in as your team settles in.</p>
+        <p>If you'd like the full list of 62, send me a message on LinkedIn or email me at <a href="mailto:hello.ai.audit@gmail.com">hello.ai.audit@gmail.com</a>, and I'll share it. And if one stands out, let's talk it through.</p>
+        <p><b>Sources:</b><br>Lovable customer stories: <a href="https://lovable.dev/customers">lovable.dev/customers</a> (Nursa, Atonom, O3 World)<br>Microsoft customer stories: Komatsu Australia, John Cockerill (<a href="https://www.microsoft.com/en/customers">microsoft.com/en/customers</a>)<br>Tool templates: <a href="https://lovable.dev/templates/apps/internal-tools">lovable.dev/templates/apps/internal-tools</a><br></p>
+      </div>
+      <p class="end" style="margin-top:28px"><br></p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">I do not issue attest opinions. I support the systems, processes, controls and files behind them. Blog content is for educational purposes only and is not advice.<br>© 2026 Dominic Andreas. All rights reserved.</div>
+  </footer>
+
+  </body></html>
