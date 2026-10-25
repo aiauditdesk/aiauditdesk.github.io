@@ -119,7 +119,8 @@
       font-size: clamp(24px, 3vw, 32px);
       margin: 8px 0 14px;
     }
-    .write-in .email-link {
+    .write-in .email-link,
+    .guide-offer .email-link {
       color: #1F3D32;
       font-weight: 600;
       text-decoration: underline;
@@ -131,6 +132,127 @@
     }
     .write-in li + li { margin-top: 6px; }
     .write-in .reply-note { color: var(--muted); font-size: 15px; }
+    .guide-offer {
+      border-top: 1px solid var(--rule);
+      padding: 48px 0 72px;
+    }
+    .guide-lead {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 16.5px !important;
+      line-height: 1.55;
+      color: #6B6256;
+      margin: 0 0 20px;
+      max-width: 62ch;
+    }
+    .guide-card {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid #D6CCBC;
+      border-radius: 6px;
+      padding: 32px 36px;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 10px 28px rgba(26,23,20,0.05);
+    }
+    .guide-cover {
+      flex: 0 0 196px;
+      height: 256px;
+      position: relative;
+    }
+    .guide-cover .guide-pg {
+      position: absolute;
+      inset: 0;
+      border-radius: 5px;
+      background: #FFFFFF;
+      border: 1px solid #D6CCBC;
+    }
+    .guide-cover .guide-p2 { transform: translate(12px, 8px) rotate(3deg); }
+    .guide-cover .guide-p1 { transform: translate(6px, 4px) rotate(1.5deg); }
+    .guide-front {
+      position: absolute;
+      inset: 0;
+      border-radius: 5px;
+      background: linear-gradient(160deg, #1F3D32, #18332A);
+      color: #FFF9F0;
+      padding: 20px 18px;
+      box-sizing: border-box;
+      box-shadow: 0 8px 22px rgba(31, 61, 50, 0.22);
+      border: 1px solid rgba(154, 123, 74, 0.35);
+    }
+    .guide-front .guide-k {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #F0E6D4;
+    }
+    .guide-front .guide-n {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 56px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 16px 0 6px;
+      color: #FFF9F0;
+    }
+    .guide-front .guide-t {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.35;
+      color: #FFF9F0;
+    }
+    .guide-front .guide-r {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 52px;
+      border-top: 1px solid rgba(240, 230, 212, 0.35);
+    }
+    .guide-front .guide-f {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 11px;
+      color: #F0E6D4;
+      line-height: 1.45;
+    }
+    .guide-offer .guide-txt .small {
+      margin: 0 0 8px;
+      font-size: 12px !important;
+      color: #7A6540;
+    }
+    .guide-offer .guide-txt h2 {
+      font-family: "Source Serif 4", Georgia, serif !important;
+      font-size: clamp(24px, 3vw, 32px) !important;
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+      color: #1A1714;
+    }
+    .guide-offer .guide-txt p:not(.small):not(.guide-note) {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 16.5px !important;
+      line-height: 1.55;
+      color: #6B6256;
+      margin: 0 0 16px;
+      max-width: none;
+    }
+    .guide-offer .cta-row { margin-top: 0; }
+    .guide-offer .guide-note {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 15px !important;
+      color: #6B6256;
+      margin-top: 12px;
+      margin-bottom: 0;
+    }
+    @media (max-width: 700px) {
+      .guide-cover { flex: none; width: 180px; height: 236px; align-self: center; }
+      .guide-card { flex-direction: column; padding: 28px 22px; gap: 24px; }
+    }
     .offer-panel { display: none !important; }
     .wrap:has(#tab-automation[aria-selected="true"]) #panel-automation,
     .wrap:has(#tab-services[aria-selected="true"]) #panel-services,
@@ -158,12 +280,12 @@
         <div class="contact-copy contact-hero">
           <p class="small">CONTACT</p>
           <h1 id="contact-title">Book a free 20-minute call</h1>
-          <p class="intro">Free phone call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. Pick a time that works for you — you’ll get a calendar invite with a Google Meet link.</p>
+          <p class="intro">Free 20-minute call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. Pick a time that works for you — you’ll get a calendar invite with a Google Meet link.</p>
         </div>
 
         <div class="booking-block">
           <p class="offer-line">Tell me what you need prepared, reviewed, built, or automated.</p>
-          <a class="btn" href="https://calendar.app.google/h16Y8WJkNjMLpuC16" target="_blank" rel="noopener">Book a fit call</a>
+          <a class="btn" href="https://calendar.app.google/h16Y8WJkNjMLpuC16" target="_blank" rel="noopener">Book a 20-minute call</a>
         </div>
 
         <div class="write-in" id="write-in">
@@ -176,6 +298,32 @@
             <li>Your timeline and best way to reach you</li>
           </ul>
           <p class="reply-note">I reply within one business day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-offer" id="guide-offer" aria-labelledby="guide-title">
+      <div class="wrap">
+        <p class="guide-lead">Not ready for a call? Get the free guide to 62 internal tools.</p>
+        <div class="guide-card">
+          <div class="guide-cover" aria-hidden="true">
+            <div class="guide-pg guide-p2"></div>
+            <div class="guide-pg guide-p1"></div>
+            <div class="guide-front">
+              <div class="guide-k">Field guide · 11 pages</div>
+              <div class="guide-n">62</div>
+              <div class="guide-t">Internal tools for small and medium-sized businesses</div>
+              <div class="guide-r"></div>
+              <div class="guide-f">Dominic Andreas, CPA<br>aiauditdesk.github.io</div>
+            </div>
+          </div>
+          <div class="guide-txt">
+            <p class="small">Free PDF</p>
+            <h2 id="guide-title">62 internal tools small and medium-sized businesses are building with AI</h2>
+            <p>An 11-page field guide with sourced examples across finance, sales, marketing, operations, compliance, and HR. <br>A starting point before your next renewal or build-or-buy decision.</p>
+            <p>Email <a class="email-link" href="mailto:hello.ai.audit@gmail.com">hello.ai.audit@gmail.com</a></p>
+            <p class="guide-note">I'll email you the PDF.</p>
+          </div>
         </div>
       </div>
     </section>

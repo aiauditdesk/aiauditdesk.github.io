@@ -201,7 +201,7 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 8px;
-      background: #FFFFFF;
+      background: transparent;
       border: 1px solid #D6CCBC;
       border-radius: 6px;
       padding: 20px 18px;
@@ -228,12 +228,63 @@
       font-variant-numeric: tabular-nums;
       padding: 0;
     }
+
+    #engagements .step-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #1F3D32;
+      color: #FFF9F0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 4px;
+      flex: none;
+    }
+    #engagements .step-icon svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
     #engagements .eng-cta { margin-top: 22px; }
     @media (max-width: 900px) {
       #engagements .stack { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 560px) {
       #engagements .stack { grid-template-columns: 1fr; }
+    }
+
+    .ai-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 100%;
+      margin: 10px 0 4px;
+    }
+    #panel-automation .ai-chips + br { display: none; }
+    .ai-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #D4E3DA;
+      color: #1F3D32;
+      border-radius: 999px;
+      padding: 7px 12px 7px 10px;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+    .ai-chip svg {
+      width: 15px;
+      height: 15px;
+      flex: none;
+    }
+    .ai-chip-sigma {
+      font-size: 15px;
+      line-height: 1;
+      font-weight: 600;
     }
 
     footer.site-foot {
@@ -373,7 +424,7 @@
         <p class="small hero-kicker">FRACTIONAL AI LEAD · certified public accountant</p>
         <h1 id="hero-title">AI-first leadership that fuels growth — when you need it, for as long as you need it.</h1>
         <div class="hero-top">
-          <p class="lead">Fractional leadership and targeted support for leaders at startups, small and medium-sized businesses, and other organizations.<br><br>I support four core areas:<br>• AI and automation advisory, operations, and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting<br><br>AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p></div>
+          <p class="lead">Fractional leadership and targeted support for leaders at startups, small and medium-sized businesses, and other organizations.<br><br><b>I support four core areas:</b><br>• AI and automation advisory, operations, and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting<br><br>AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p></div>
         <div class="cta-row">
           <a class="btn btn-line" href="#services">See the services</a>
           <a class="btn" href="contact.html">Book a fit call</a>
@@ -435,7 +486,7 @@
           </div>
         </div>
 
-<div class="stack"><article class="item"><div class="n">01</div><h3>Fractional AI lead</h3><p>Advisory and implementation support covering data wrangling, strategic roadmap development, AI setup, operating practices, workflow design, periodic planning reviews, training, and coordination.<br>• Scope can include conversational agents, small agent or bot teams, voice agents (for example, an AI receptionist for missed or after-hours calls), and custom internal tools, dashboards, Excel macros, and templates where they add value.<br>• Draft and maintain AI rules and policies, designate control owners, and define review practices you can adopt.</p></article>
+<div class="stack"><article class="item"><div class="n">01</div><h3>Fractional AI lead</h3><p>Advisory and implementation support covering data wrangling, strategic roadmap development, AI setup, operating practices, workflow design, periodic planning reviews, training, and coordination.<br>• Scope can include the following, where they add value:<br><span class="ai-chips" contenteditable="false"><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6.2h14v9.5H9.4L5 19.2V6.2z"></path></svg>Conversational agents</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="2.3"></circle><path d="M4.6 17c.5-2.6 2.3-4 4.4-4s3.9 1.4 4.4 4"></path><circle cx="16.2" cy="8.4" r="1.9"></circle><path d="M13.2 17c.3-1.7 1.5-3 3-3.2 1.6.2 2.8 1.4 3.2 3.2"></path></svg>Agent or bot teams</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h2.4l.8 2.6-1.6.9a10 10 0 0 0 5.4 5.4l.9-1.6 2.6.8v2.4c0 .7-.6 1.4-1.4 1.4C9.2 16.1 6.4 13.3 6.4 5.4 6.4 4.6 7 4 7.8 4Z"></path></svg>Voice agents (AI receptionist)</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.2" height="6.2" rx="1"></rect><rect x="13.8" y="4" width="6.2" height="6.2" rx="1"></rect><rect x="4" y="13.8" width="6.2" height="6.2" rx="1"></rect><rect x="13.8" y="13.8" width="6.2" height="6.2" rx="1"></rect></svg>Custom internal tools &amp; dashboards</span><span class="ai-chip"><span class="ai-chip-sigma" aria-hidden="true">Σ</span>Excel macros &amp; templates</span></span><br>For example, an AI receptionist for missed or after-hours calls.<br>• Draft and maintain AI rules and policies, designate control owners, and define review practices you can adopt.</p></article>
           <article class="item">
             <div class="n">02</div>
             <h3>Use case assessment and quality review</h3>
@@ -508,22 +559,22 @@
         <h2 id="engagements-title">Call → scope → start → delivered</h2>
         <div class="stack">
           <article class="item">
-            <div class="n">01</div>
+            <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.8h2.6l.9 2.8-1.7 1a11 11 0 0 0 5.9 5.9l1-1.7 2.8.9v2.6c0 .8-.7 1.5-1.5 1.5C9.4 17.8 6.2 14.6 6.2 5.3 6.2 4.5 6.9 3.8 7.7 3.8Z"></path></svg></div><div class="n">01</div>
             <h3>Free 20-minute call</h3>
             <p>Align on goals, challenges, and priorities.</p>
           </article>
           <article class="item">
-            <div class="n">02</div>
+            <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8.2 17.8 4 19l1.2-4.2L16.5 3.5z"></path><path d="M14.8 5.2 18.8 9.2"></path></svg></div><div class="n">02</div>
             <h3>Written scope</h3>
             <p>Clear scope, timeline, and investment before work begins.</p>
           </article>
           <article class="item">
-            <div class="n">03</div>
+            <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="10.5" width="13" height="9.5" rx="1.8"></rect><path d="M8.2 10.5V8.2a3.8 3.8 0 0 1 7.6 0v2.3"></path></svg></div><div class="n">03</div>
             <h3>Get set up&nbsp;</h3>
             <p>Secure file sharing or least-privilege access. Remote, with no unnecessary steps.</p>
           </article>
           <article class="item">
-            <div class="n">04</div>
+            <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12.2 10.2 16l7.3-8"></path></svg></div><div class="n">04</div>
             <h3>Delivered</h3>
             <p>Walkthrough call with 1–2 revision rounds. Delivered with professional standards, quality, and risk in view.</p>
           </article>
