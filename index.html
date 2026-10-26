@@ -179,10 +179,9 @@
       align-items: center;
       justify-content: center;
       pointer-events: none;
-      transform: rotate(180deg);
     }
     .offer-tab .card-chevron svg { display: block; }
-    .offer-tab[aria-selected="true"] .card-chevron { transform: none; }
+    .offer-tab[aria-selected="true"] .card-chevron { transform: rotate(180deg); }
     .offer-tab[aria-selected="true"] { background: #1F3D32; color: #FFF9F0; border-color: #1F3D32; }
     .offer-tab[aria-selected="true"] .tab-n { color: #F0E6D4; }
     .offer-tab[aria-selected="true"]:hover {
@@ -461,9 +460,9 @@
         <p class="small offer-kicker"><span style="font-size: 13px;">services</span></p>
         <p class="offer-note">Click each service to see how I support it</p>
         <div class="offer-tabs" role="tablist" aria-label="Services">
-          <button type="button" class="offer-tab" role="tab" id="tab-automation" aria-selected="true" aria-controls="panel-automation"><span class="tab-n">01</span>AI and automation</button>
-          <button type="button" class="offer-tab" role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services"><span class="tab-n">02</span>Audit support and controls</button>
-          <button type="button" class="offer-tab" role="tab" id="tab-filings" aria-selected="false" aria-controls="panel-filings"><span class="tab-n">03</span>Accounting and financial reporting</button>
+          <button type="button" class="offer-tab" role="tab" id="tab-automation" aria-selected="true" aria-controls="panel-automation"><span class="tab-n">01</span>AI and automation<span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+          <button type="button" class="offer-tab" role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services"><span class="tab-n">02</span>Audit support and controls<span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+          <button type="button" class="offer-tab" role="tab" id="tab-filings" aria-selected="false" aria-controls="panel-filings"><span class="tab-n">03</span>Accounting and financial reporting<span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
         </div>
         <div class="offer-panel" id="panel-services" role="tabpanel" aria-labelledby="tab-services" hidden="">
         <div class="band-head">
