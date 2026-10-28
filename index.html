@@ -367,12 +367,28 @@
     .hero .strip {
       background: #F8F4EC;
       color: #1A1714;
-      border-top: 0;
-      padding: 22px 8px 22px 20px;
+      margin-top: 52px;
+      border-radius: 4px;
+      border-top: 2px solid #B08D57;
+      padding: 24px 8px 24px 24px;
+      font-variant-numeric: tabular-nums lining-nums;
     }
-    .hero .strip .cell + .cell { border-left-color: #D6CCBC; }
-    .hero .strip .cell b { color: #7A6540; }
+    .hero .strip .cell { padding-top: 0; }
+    .hero .strip .cell + .cell { border-left: 1px solid #C9BBA3; }
+    .hero .strip .cell b {
+      color: #7A6540;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums lining-nums;
+      margin-bottom: 8px;
+    }
     .hero .strip .cell span { color: #6B6256; }
+    @media (max-width: 880px) {
+      .hero .strip { margin-top: 36px; padding: 8px 20px; }
+      .hero .strip .cell { padding: 16px 0; }
+      .hero .strip .cell + .cell { border-left: 0; border-top: 1px solid #C9BBA3; }
+    }
     .ai-models { margin: 18px 0 0; }
     .ai-models-cap {
       font-size: 12px;
@@ -441,7 +457,7 @@
         <p class="small hero-kicker">AI CONSULTANT · certified public accountant</p>
         <h1 id="hero-title">AI-first leadership that fuels growth — when you need it, for as long as you need it.</h1>
         <div class="hero-top">
-          <p class="lead">Leadership and targeted support for leaders at startups, small and medium-sized businesses, and other organizations.<br><br>I support four core areas:<br>• AI and automation advisory, operations, and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting<br><br>AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p></div>
+          <p class="lead">Leadership and targeted support for startups, small and medium-sized businesses, and other organizations.<br><br>I support four core areas:<br>• AI and automation advisory, operations, and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting<br><br>AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p></div>
         <div class="cta-row">
           <a class="btn btn-line" href="#services">See the services</a>
           <a class="btn" href="contact.html">Book a fit call</a>
