@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- Public post. Source: versions/option-2/eight-reasons-internal-tools-live.html -->
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>8 reasons teams build their own internal tools — Dominic Andreas, CPA</title>
+  <meta name="description" content="Build vs. buy isn't only about cost. Eight reasons teams build their own internal tools.">
+  <meta name="theme-color" content="#1F3D32">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3D32'/%3E%3C/svg%3E">
+  <style>
+    @font-face {
+      font-family: "Merriweather Light";
+      src: url("../../fonts/Merriweather-Light.ttf") format("truetype");
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Merriweather Light";
+      src: url("../../fonts/Merriweather-LightItalic.ttf") format("truetype");
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: Carlito;
+      src: url("../../fonts/Carlito-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: Carlito;
+      src: url("../../fonts/Carlito-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+  <style>
+
+    :root {
+      --forest: #1F3D32;
+      --forest-2: #18332A;
+      --ink: #1A1714;
+      --muted: #6B6256;
+      --paper: #FFFEF9;
+      --rule: #D6CCBC;
+      --clay: #1F3D32;
+      --panel: #FFFEF9;
+      --sage: #7A6540;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Carlito, "Segoe UI", system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--forest-2); }
+    :focus-visible { outline: 2px solid var(--forest); outline-offset: 3px; }
+    ::selection { background: var(--forest); color: var(--paper); }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #FFFEF9;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 68px;
+      flex-wrap: wrap;
+      padding: 8px 0;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--forest); flex: 0 0 auto; }
+    .logo svg, .logo img.wordmark, .logo img.wordmark-da { display: block; height: 40px; width: auto; max-width: none; flex-shrink: 0; }
+    .logo .lockup {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo .lockup-name {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3px;
+    }
+    .logo .lockup-word,
+    .logo .logo-cred {
+      font-family: "Montserrat", "Century Gothic", sans-serif !important;
+      font-weight: 600;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .logo .lockup-word {
+      font-size: 15px;
+      letter-spacing: 0.2em;
+      color: #1A1714;
+    }
+    .logo .logo-cred {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      color: #46382A;
+    }
+    .nav-right { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 22px; font-size: 16px; font-weight: 500; color: var(--muted); }
+    .nav-right a { transition: color .15s ease; }
+    .nav-right a:hover,
+    .nav-right a[aria-current="page"] { color: var(--ink); }
+    h1, h2, h3 { font-family: "Merriweather Light", Georgia, serif; font-weight: 300; letter-spacing: 0; }
+    .kicker {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--sage);
+    }
+    .page { padding: 64px 0 96px; }
+    .lede { max-width: var(--measure, 46rem); color: var(--muted); font-size: 18.5px; line-height: 1.55; }
+    .sample { margin-top: 18px; max-width: 68ch; font-size: 14px; color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 0 40px;
+      font-size: 13.5px;
+      color: var(--muted);
+    }
+    .back { display: inline-block; font-size: 14.5px; font-weight: 600; color: var(--forest); }
+    .byline { margin-top: 16px; font-size: 14.5px; color: var(--muted); }
+    @media (max-width: 720px) {
+      .page { padding: 36px 0 64px; }
+      .nav-right { gap: 8px 16px; font-size: 15.5px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+    .nav-right { font-size: 16px; }
+    .mast {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+      gap: 36px;
+      align-items: end;
+      background: #F2EDE3;
+      padding: 36px 36px 32px;
+    }
+    .mast h1 { font-size: clamp(42px, 5.5vw, 64px); line-height: 1.12; font-weight: 300; max-width: 10ch; }
+    .mast .lede { max-width: 36ch; }
+    .mast img { width: 100%; height: 230px; object-fit: cover; object-position: center 62%; }
+    .issues { margin-top: 28px; border-top: 1px solid var(--rule); }
+    .issue {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 20px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .issue .num { font-weight: 700; color: var(--forest); letter-spacing: 0.04em; }
+    .issue time { display: block; margin-top: 6px; color: var(--muted); font-size: 14.5px; }
+    .issue h2 { font-size: clamp(26px, 3vw, 34px); line-height: 1.22; font-weight: 300; }
+    .issue .dek { margin-top: 8px; color: var(--muted); max-width: 62ch; }
+    .mast-slim { max-width: 760px; margin-bottom: 28px; }
+    .mast-slim .series { font-size: 15px; font-weight: 700; color: var(--forest); }
+    .essay { --measure: 46rem; }
+    .essay h1 { font-size: clamp(36px, 5vw, 52px); line-height: 1.22; font-weight: 300; margin: 8px 0 12px; max-width: var(--measure); }
+    .essay h2 { font-size: 28px; line-height: 1.25; font-weight: 300; margin: 32px 0 0; }
+    .essay p { margin-top: 12px; font-size: 18px; line-height: 1.65; max-width: var(--measure); }
+    .essay ul, .essay ol { margin: 12px 0 0; padding-left: 1.2em; max-width: var(--measure); font-size: 18px; line-height: 1.65; }
+    .essay li { margin-top: 8px; }
+    .essay .body-one a { color: var(--forest); font-weight: 600; text-decoration: underline; }
+    .essay figure { margin: 18px 0 8px; max-width: 540px; }
+    .essay figure img { width: 100%; height: auto; border: 1px solid var(--rule); }
+    .sign { margin-top: 36px; }
+    @media (max-width: 800px) {
+      .mast, .issue { grid-template-columns: 1fr; }
+      .mast { padding: 24px 20px; }
+      .mast img { height: 200px; }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="logo" href="../../index.html" aria-label="Dominic Andreas, CPA"><span class="lockup"><img class="wordmark-da" src="../../da-monogram.png" alt="" height="40"><span class="lockup-name"><span class="lockup-word">DOMINIC ANDREAS</span><span class="logo-cred">CPA</span></span></span></a>
+
+      <nav class="nav-right" aria-label="Primary">
+        <a href="../../index.html#services">Services</a>
+        <a href="../../background.html">Background</a>
+        <a href="../index.html" aria-current="page">Blog</a>
+        <a href="../../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page">
+
+    <article class="wrap essay">
+      <div class="mast-slim">
+        <a class="back" href="../index.html">All issues</a>
+        <p class="kicker" style="margin-top:22px"><time datetime="2026-10-28">No. 06 · october 2026</time></p>
+      </div>
+      <h1>Beyond cost savings: 8 reasons teams build their own internal tools</h1>
+      <div class="body-one">
+        <figure>
+          <img src="eight-reasons-internal-tools.jpg" alt="Beyond cost savings: 8 reasons teams build their own internal tools. Buying and building are both valid.">
+        </figure>
+        <p class="lede">Build vs. buy isn't only about cost. Buying and building can both be the right call, and building can bring other gains too.</p>
+        <p>Here are 8 reasons a team might consider building its own internal tools. They're also in this carousel: <a href="eight-reasons-internal-tools.pdf">8 reasons (PDF)</a>.</p>
+        <ol>
+          <li><b>Off-the-shelf software doesn't always fit.</b> Some workflows have no good tool, so they run on manual steps and spreadsheets. Other teams pay full price and use only a fraction of it.</li>
+          <li><b>The numbers end up in one place.</b> Data spread across systems and spreadsheets can come together in one live view. One place makes it easier to layer insights and alerts on top of the data.</li>
+          <li><b>An audit trail can be built in.</b> Records can trace back to their sources, with timestamps.</li>
+          <li><b>Fewer manual errors.</b> Built-in validation can flag issues early, such as miscoded time or totals that don't match subtotals.</li>
+          <li><b>You can change it when the business changes.</b> Improvements don't have to wait on someone else's product roadmap. Small improvements can go live in days, not quarters.</li>
+          <li><b>Live numbers support faster decisions.</b> Reporting can move closer to real time.</li>
+          <li><b>People may be more likely to use it.</b> A tool built around how a team works can be easier to adopt.</li>
+          <li><b>It can fill gaps around the software you already use.</b> Custom tools can sit alongside existing systems, rather than replacing them.</li>
+        </ol>
+        <p>As mentioned in the last post, some companies report savings after building their own custom tools that better fit their processes.</p>
+        <h2>Consider your options first</h2>
+        <p>Building isn't automatically the best answer. If vendors already fit the need, start with a demo or two:</p>
+        <ul>
+          <li><b>Book a demo.</b> Most are free, and you're not committed to buying. The main cost is your time.</li>
+          <li><b>Check the fit.</b> Understand their features, whether the product fits your goals and work, and what it's like to use.</li>
+          <li><b>Ask questions.</b> For example, how your data is stored and protected, whether there's a security report you can review, and what each plan includes.</li>
+          <li><b>Consider a pilot.</b> See whether a short pilot is available and makes sense, and review the software's pricing and any AI-specific terms.</li>
+        </ul>
+        <p>If you build an internal tool, test it rigorously before rollout, including unusual inputs and real-world use. The goal is a tool that works reliably for everyone who uses it, not just the person who built it, with appropriate governance.</p>
+        <p>Custom internal tools are pieces of a larger AI strategy that can include chat assistants, agent teams, voice agents, and automated workflows. An AI consultant can help maximize the use of AI and map how the pieces fit together.</p>
+      </div>
+      <p class="end" style="margin-top:28px"><br></p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">I do not issue attest opinions. I support the systems, processes, controls and files behind them. Blog content is for educational purposes only and is not advice.<br>© 2026 Dominic Andreas. All rights reserved.</div>
+  </footer>
+
+  </body></html>
