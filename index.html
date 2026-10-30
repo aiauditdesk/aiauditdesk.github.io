@@ -6,24 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dominic Andreas, CPA — AI, Internal Audit, SOX, SOC, and Reporting</title>
   <meta name="description" content="Independent fractional AI operator support, internal audit, SOX, and SEC filings." />
-  <meta name="theme-color" content="#1F3D32" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3D32'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#46382A" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%2346382A'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600;700;800&amp;family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="site.css" />
   <style id="page-css">
     :root {
-      --forest: #1F3D32;
-      --forest-2: #18332A;
+      --forest: #46382A;
+      --forest-2: #3E3125;
       --leaf: #7A6540;
       --ink: #1A1714;
       --muted: #6B6256;
       --line: #D6CCBC;
-      --paper: #FFFEF9;
-      --panel: #FFFEF9;
-      --gold: #1F3D32;
+      --paper: #FFFFFF;
+      --panel: #FFFFFF;
+      --gold: #46382A;
       --rule: #D6CCBC;
     }
     body, .small, .logo, button, input, select, textarea, label {
@@ -32,26 +31,31 @@
     h1, h2, h3, h1.page-title {
       font-family: "Source Serif 4", Georgia, serif !important;
     }
+    p, .lead, .intro, .close, .offer-note, .item p, .cell span, footer .wrap {
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 16.5px;
+    }
     .meta-box h2 { font-family: "Source Sans 3", system-ui, sans-serif; }
-    header { background: #FFFEF9; }
-    ::selection { background: #1F3D32; color: #FFF9F0; }
-    .dot { background: #1F3D32 !important; }
-    .logo svg, .logo img.wordmark, .logo img.wordmark-da { display: block; height: 40px; width: auto; max-width: none; flex-shrink: 0; }
+    header { background: #FFFFFF; }
+    ::selection { background: #46382A; color: #FFF9F0; }
+    .dot { background: #46382A !important; }
+    .logo svg, .logo img.wordmark, .logo img.wordmark-da { display: block; height: 34px; width: auto; }
     .logo .lockup {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
     .logo .lockup-name {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 3px;
+      align-items: flex-start;
+      gap: 4px;
+      line-height: 1;
     }
     .logo .lockup-word,
     .logo .logo-cred {
-      font-family: "Montserrat", "Century Gothic", sans-serif !important;
+      font-family: "Inter", system-ui, sans-serif !important;
       font-weight: 600;
       line-height: 1;
       white-space: nowrap;
@@ -64,93 +68,154 @@
     .logo .logo-cred {
       font-size: 10px;
       letter-spacing: 0.22em;
-      color: #46382A;
+      color: #0B5269;
     }
-    .btn { background: #1F3D32 !important; color: #FFF9F0 !important; border-radius: 5px; box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 22px rgba(31,61,50,0.22); transition: background .15s ease, color .15s ease, box-shadow .15s ease, transform .15s ease; }
-    .btn:hover { background: #18332A !important; transform: translateY(-1px); box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 22px rgba(31,61,50,0.28); }
-    .btn:focus-visible { outline: 2px solid #1F3D32; outline-offset: 2px; }
+    .btn { background: #0B5269 !important; color: #FFF9F0 !important; border-radius: 5px; box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 22px rgba(11,82,105,0.22); transition: background .15s ease, color .15s ease, box-shadow .15s ease, transform .15s ease; }
+    .btn:hover { background: #083F51 !important; transform: translateY(-1px); box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 22px rgba(11,82,105,0.28); }
+    .btn:focus-visible { outline: 2px solid #0B5269; outline-offset: 2px; }
     a.shortcut[href*="contact"] {
-      background: #1F3D32 !important;
+      background: #46382A !important;
       color: #FFF9F0 !important;
-      border-color: #1F3D32;
+      border-color: #46382A;
       border-radius: 5px;
     }
-    a.shortcut[href*="contact"]:hover { background: #18332A; color: #FFF9F0; }
+    a.shortcut[href*="contact"]:hover { background: #3E3125; color: #FFF9F0; }
     .close { max-width: none; }
-    .hero-kicker { font-size: 13px; color: #7A6540; }
+    .hero-kicker { font-size: 13px; color: #0B5269; }
+    .hero-kicker,
+    .offer-kicker,
+    #engagements .small {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-kicker::before,
+    .offer-kicker::before,
+    #engagements .small::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      background: #0B5269;
+      display: inline-block;
+      flex: none;
+    }
     .cell b { font-size: 14.5px; }
     .cell span { font-size: 16px; }
     .btn.btn-line {
       background: #FFFFFF !important;
       background-color: #FFFFFF !important;
       color: #1A1714 !important;
-      border: 1px solid #1F3D32 !important;
+      border: 1px solid #0B5269 !important;
       border-radius: 5px;
       box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 10px 28px rgba(26,23,20,0.05);
     }
     .btn.btn-line:hover { background: #FFFFFF !important; background-color: #FFFFFF !important; color: #1A1714 !important; transform: translateY(-1px); box-shadow: 0 6px 18px rgba(26, 23, 20, 0.07); }
-    .btn.btn-line:focus-visible { outline: 2px solid #1F3D32; outline-offset: 2px; }
-    .cta-row { align-items: center; gap: 18px; }
-    .cta-row .cta-text {
-      display: inline-flex;
-      align-items: center;
-      min-height: 46px;
-      padding: 0;
-      background: none;
-      border: 0;
-      box-shadow: none;
-      border-radius: 0;
-      color: #1F3D32;
-      font-family: "Source Sans 3", system-ui, sans-serif;
-      font-size: 14.5px;
-      font-weight: 600;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .btn.btn-line:focus-visible { outline: 2px solid #46382A; outline-offset: 2px; }
+    .meta-box { border-left-color: #46382A; }
+    .hero { padding-bottom: 0; border-bottom: 0; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 7fr 4fr;
+      column-gap: 72px;
+      row-gap: 32px;
+      border-top: 0;
+      margin-top: 36px;
+      padding-top: 0;
+      align-items: start;
     }
-    .cta-row .cta-text:hover { color: #18332A; }
-    .meta-box { border-left-color: #1F3D32; }
-    .hero-top { display: block; }
-    .hero-top h1 { max-width: none; }
-    .hero-top .lead {
-      grid-area: auto;
+    .hero-intro,
+    .hero-core {
+      border-top: 1px solid #121417;
+      padding-top: 24px;
+    }
+    .hero-intro .lead {
+      margin: 0;
       max-width: none;
-      margin-top: 16px;
-      font-size: 16.5px;
-      line-height: 1.55;
-      color: #6B6256;
-    }
-    .hero-top .lead span[style] { font-size: inherit !important; }
-    .hero-top .lead + .lead {
-      margin-top: 16px;
-      font-size: 16.5px;
-      line-height: 1.55;
-      color: #6B6256;
-    }
-    .hero-top .lead:empty,
-    .hero-top .lead:has(> br:only-child) { display: none; }
-    .offer-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 0 0 28px; }
-    .offer-tab {
-      font-family: "Source Serif 4", Georgia, serif !important;
-      font-size: 24px;
+      font-size: 20px;
+      line-height: 1.45;
       font-weight: 500;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      text-align: left;
+      letter-spacing: -0.01em;
       color: #1A1714;
-      background: #FFFFFF;
-      border: 1px solid #46382A;
-      border-radius: 6px;
-      padding: 14px 16px;
+    }
+    .hero-intro .cta-row { margin-top: 32px; gap: 12px; }
+    .hero-core .core-areas-kicker {
+      margin: 0 0 6px;
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 12px !important;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      line-height: 1.4;
+      color: #0B5269;
+    }
+    .hero-core ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .hero-core li {
+      margin: 0;
+      padding: 11px 0;
+      border-bottom: 1px solid #DEDFE2;
+      font-family: "Source Sans 3", system-ui, sans-serif !important;
+      font-size: 15.5px !important;
+      font-weight: 500;
+      line-height: 1.45;
+      color: #1A1714;
+    }
+    .hero-core li::before {
+      content: "•";
+      color: #0B5269;
+      margin-right: 8px;
+    }
+    .hero-grid .stmt {
+      margin: 14px 0 0;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 400;
+      color: #4A4F57;
+    }
+    .hero-grid .lead:empty,
+    .hero-grid .lead:has(> br:only-child) { display: none; }
+    @media (max-width: 880px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .offer-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin: 0 0 48px;
+      border-top: 1px solid #1A1714;
+      border-bottom: 1px solid #DEDFE2;
+    }
+    .offer-tab {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 18px;
+      line-height: 1.25;
+      text-align: left;
+      color: #6B6256;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 32px 24px 32px 0;
       cursor: pointer;
-      transition: border-color .15s ease, box-shadow .15s ease, background .15s ease, transform .15s ease;
-      box-shadow: 0 1px 0 rgba(255,255,255,0.9) inset, 0 10px 28px rgba(26,23,20,0.05);
+      box-shadow: none;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 16px;
+      align-items: center;
+      position: relative;
+      transition: color .15s ease;
+    }
+    .offer-tab + .offer-tab {
+      padding-left: 24px;
+      border-left: 1px solid #DEDFE2;
     }
     .offer-tab:hover {
-      border-color: color-mix(in srgb, #46382A 55%, #D6CCBC);
-      box-shadow:
-        inset 0 0 0 1px color-mix(in srgb, #46382A 35%, transparent),
-        0 6px 18px rgba(26, 23, 20, 0.07);
-      transform: translateY(-1px);
+      background: transparent;
+      color: #1A1714;
+      box-shadow: none;
+      transform: none;
     }
     .offer-tab:focus-visible {
       outline: 2px solid #46382A;
@@ -158,23 +223,24 @@
     }
     .offer-tab .tab-n {
       display: block;
-      font-family: "IBM Plex Sans", system-ui, sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.14em;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 14px;
       font-weight: 600;
-      margin-bottom: 6px;
-      color: #7A6540;
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+      margin: 0;
+      color: #9A9EA5;
     }
-    .offer-tab { position: relative; padding-right: 48px; }
+    .offer-tab .tab-label { min-width: 0; }
     .offer-tab .card-chevron {
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      width: 28px;
-      height: 28px;
-      margin-top: -14px;
-      border-radius: 50%;
-      border: 1px solid currentColor;
+      position: static;
+      right: auto;
+      top: auto;
+      width: auto;
+      height: auto;
+      margin: 0;
+      border-radius: 0;
+      border: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -182,8 +248,22 @@
     }
     .offer-tab .card-chevron svg { display: block; }
     .offer-tab[aria-selected="true"] .card-chevron { transform: rotate(180deg); }
-    .offer-tab[aria-selected="true"] { background: #1F3D32; color: #FFF9F0; border-color: #1F3D32; }
-    .offer-tab[aria-selected="true"] .tab-n { color: #F0E6D4; }
+    .offer-tab[aria-selected="true"] {
+      background: transparent;
+      color: #0B5269;
+      border-color: transparent;
+      box-shadow: none;
+    }
+    .offer-tab[aria-selected="true"]::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 2px;
+      background: #0B5269;
+    }
+    .offer-tab[aria-selected="true"] .tab-n { color: #0B5269; }
     .offer-tab[aria-selected="true"]:hover {
       transform: none;
       box-shadow: none;
@@ -193,42 +273,156 @@
     .wrap:has(#tab-automation[aria-selected="true"]) #panel-automation,
     .wrap:has(#tab-services[aria-selected="true"]) #panel-services,
     .wrap:has(#tab-filings[aria-selected="true"]) #panel-filings { display: block !important; }
-    .offer-kicker { margin: 0 0 14px; }
+    .offer-kicker { margin: 0 0 14px; color: #0B5269; }
     .offer-note {
-      margin: -4px 0 18px;
+      margin: -4px 0 28px;
       color: var(--muted);
       font-size: 16.5px;
       line-height: 1.45;
     }
-    #engagements { border-top: 1px solid var(--rule); padding-bottom: 72px; }
-    #panel-automation .item:last-child { border-bottom: 0; }
+    #services .offer-panel .band-head {
+      display: grid;
+      grid-template-columns: 7fr 5fr;
+      gap: 48px;
+      margin-bottom: 44px;
+      align-items: end;
+    }
+    #services .offer-panel .band-head h2 { margin: 0; }
+    #services .offer-panel .band-head .intro {
+      grid-column: 2;
+      grid-row: 1;
+      max-width: none;
+      margin: 0;
+      align-self: end;
+    }
+    #services .stack {
+      display: grid;
+      gap: 20px;
+      border-top: 0;
+      margin-top: 0;
+    }
+    #services #panel-automation .stack { grid-template-columns: repeat(3, 1fr); }
+    #services #panel-automation .stack > .item:first-child { grid-column: span 2; }
+    #services #panel-services .stack,
+    #services #panel-filings .stack { grid-template-columns: repeat(2, 1fr); }
+    #services .item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 0;
+      background: #FFFFFF;
+      border: 1px solid #D6CCBC;
+      padding: 32px;
+    }
+    #services .item .n {
+      padding-top: 0;
+      margin: 0;
+      line-height: 1;
+      color: #0B5269;
+    }
+    #services .item h3 {
+      grid-column: auto;
+      margin: 14px 0 12px;
+    }
+    #services .item p {
+      grid-column: auto;
+      margin: 0;
+    }
+    #services .close {
+      border-left: 2px solid #1F3D32;
+      padding: 4px 0 4px 20px;
+      margin-top: 32px;
+      max-width: none;
+    }
+    #services .ai-models {
+      margin-top: 36px;
+      display: flex;
+      align-items: baseline;
+      gap: 28px;
+      flex-wrap: wrap;
+      border-top: 1px solid #DEDFE2;
+      padding-top: 22px;
+    }
+    #services .ai-models-cap {
+      margin: 0;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #0B5269;
+      white-space: nowrap;
+    }
+    #services .ai-models-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: baseline;
+    }
+    #services .ai-models-name {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.01em;
+      color: #1A1714;
+      white-space: nowrap;
+    }
+    #engagements { border-top: 1px solid var(--rule); padding-bottom: 72px; background: #FFFFFF; }
     #engagements .close { margin-top: 16px; }
-    #engagements .small { margin: 0 0 10px; }
+    #engagements .small { margin: 0 0 10px; color: #0B5269; }
     #engagements h2 { margin: 0 0 8px; }
     #engagements .stack {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
+      gap: 32px;
       border-top: 0;
-      margin-top: 0;
+      margin-top: 28px;
+      position: relative;
     }
-    #engagements .item:first-child { padding-top: 20px; }
     #engagements .item {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      text-align: left;
       gap: 8px;
       background: transparent;
-      border: 1px solid #D6CCBC;
-      border-radius: 6px;
-      padding: 20px 18px;
+      border: 0;
+      border-radius: 0;
+      border-top: 1px solid #1A1714;
+      padding: 24px 0 0;
       row-gap: 8px;
       column-gap: 0;
       grid-template-columns: none;
-      border-bottom: 1px solid #D6CCBC;
+      border-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+    #engagements .step-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 0;
+      background: #FFFFFF;
+      color: #0B5269;
+      border: 1px solid #DEDFE2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 20px;
+      flex: none;
+    }
+    #engagements .stack > .item:last-of-type .step-icon {
+      background: #0B5269;
+      border-color: #0B5269;
+      color: #FFFFFF;
+    }
+    #engagements .step-icon svg {
+      width: 18px;
+      height: 18px;
+      display: block;
     }
     #engagements .item h3,
-    #engagements .item p { grid-column: auto; margin: 0; }
+    #engagements .item p { grid-column: auto; margin: 0; text-align: left; }
     #engagements .item h3 { font-size: 18px; line-height: 1.25; color: #1A1714; }
     #engagements .item p { font-size: 15px; line-height: 1.5; color: #6B6256; }
     #engagements .item .n {
@@ -237,59 +431,42 @@
       height: auto;
       border-radius: 0;
       background: none;
-      color: #7A6540;
-      font-family: "IBM Plex Sans", system-ui, sans-serif;
-      font-size: 12px;
-      letter-spacing: 0.14em;
+      color: #B0B4B8;
+      font-family: "Inter", system-ui, sans-serif;
+      font-size: 14px;
+      letter-spacing: 0.04em;
       font-weight: 600;
       font-variant-numeric: tabular-nums;
       padding: 0;
+      text-transform: none;
     }
-
-    #engagements .step-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: #1F3D32;
-      color: #FFF9F0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 0 4px;
-      flex: none;
-    }
-    #engagements .step-icon svg {
-      width: 22px;
-      height: 22px;
-      display: block;
-    }
-    #engagements .eng-cta { margin-top: 22px; }
+    #engagements .stack > .item:last-of-type .n { color: #0B5269; }
+    #engagements .eng-cta { margin-top: 28px; }
     @media (max-width: 900px) {
-      #engagements .stack { grid-template-columns: repeat(2, 1fr); }
+      #engagements .stack { grid-template-columns: repeat(2, 1fr); gap: 36px 16px; }
     }
     @media (max-width: 560px) {
       #engagements .stack { grid-template-columns: 1fr; }
     }
-
     .ai-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       width: 100%;
-      margin: 10px 0 4px;
+      margin: 12px 0 10px;
     }
-    #panel-automation .ai-chips + br { display: none; }
     .ai-chip {
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      background: #D4E3DA;
-      color: #1F3D32;
-      border-radius: 999px;
-      padding: 7px 12px 7px 10px;
+      background: #F6F7F8;
+      color: #1A1714;
+      border: 1px solid #DEDFE2;
+      border-radius: 4px;
+      padding: 6px 11px;
       font-family: "Source Sans 3", system-ui, sans-serif;
       font-size: 13.5px;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 1.2;
       white-space: nowrap;
     }
@@ -304,121 +481,120 @@
       font-weight: 600;
     }
 
+    .hero {
+      background: #FFFFFF;
+    }
+    .hero .strip {
+      background: transparent;
+      color: #1A1714;
+      margin-top: 88px;
+      border-radius: 0;
+      border-top: 1px solid #121417;
+      border-bottom: 1px solid #DEDFE2;
+      padding: 0;
+      font-variant-numeric: tabular-nums lining-nums;
+    }
+    .hero .strip .cell { padding: 28px 24px 32px 0; }
+    .hero .strip .cell + .cell { padding-left: 24px; border-left: 1px solid #DEDFE2; }
+    .hero .strip .cell b {
+      color: #1A1714;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-variant-numeric: tabular-nums lining-nums;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .hero .strip .cell:nth-child(1) b {
+      font-size: 56px;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-transform: none;
+      font-weight: 600;
+      color: #0B5269;
+    }
+    .hero .strip .cell:nth-child(2) b {
+      font-size: 40px;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      text-transform: none;
+      font-weight: 600;
+      color: #1A1714;
+    }
+    .hero .strip .cell span { color: #4A4F57; font-size: 15px; }
+    @media (max-width: 880px) {
+      .hero .strip { margin-top: 48px; padding: 0; }
+      .hero .strip .cell { padding: 20px 0; }
+      .hero .strip .cell + .cell { border-left: 0; padding-left: 0; border-top: 1px solid #DEDFE2; }
+      .hero .strip .cell:nth-child(1) b { font-size: 42px; }
+      .hero .strip .cell:nth-child(2) b { font-size: 32px; }
+    }
+    @media (max-width: 800px) {
+      .offer-tabs { grid-template-columns: 1fr; }
+      .offer-tab + .offer-tab { padding-left: 0; border-left: 0; border-top: 1px solid #DEDFE2; }
+      #services .offer-panel .band-head { grid-template-columns: 1fr; gap: 16px; align-items: start; }
+      #services .offer-panel .band-head .intro { grid-column: auto; grid-row: auto; }
+      #services #panel-automation .stack,
+      #services #panel-services .stack,
+      #services #panel-filings .stack { grid-template-columns: 1fr; }
+      #services #panel-automation .stack > .item:first-child { grid-column: auto; }
+    }
+
     footer.site-foot {
-      background: #1F3D32;
-      color: #FFF9F0;
-      border-top: 0;
+      background: #F6F7F8;
+      color: #1A1714;
+      border-top: 1px solid #DEDFE2;
       padding: 56px 0 32px;
       font-size: 15px;
     }
     footer.site-foot .wrap {
       font-size: 15px;
-      color: #FFF9F0;
+      color: #4A4F57;
     }
     footer.site-foot .foot-grid {
       display: grid;
-      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
       gap: 36px;
       align-items: start;
     }
     footer.site-foot h3 {
       font-family: "Source Sans 3", system-ui, sans-serif !important;
-      font-size: 16px !important;
-      font-weight: 600;
-      letter-spacing: 0.02em;
+      font-size: 17px !important;
+      font-weight: 700;
+      letter-spacing: -0.01em;
       line-height: 1.3;
-      color: #FFF9F0;
+      color: #1A1714;
       margin: 0 0 12px;
     }
     footer.site-foot p,
     footer.site-foot li {
       font-family: "Source Sans 3", system-ui, sans-serif !important;
-      font-size: 15px !important;
+      font-size: 15.5px !important;
       line-height: 1.55;
-      color: #FFF9F0;
+      color: #4A4F57;
       margin: 0;
     }
-    footer.site-foot .foot-brand p { max-width: 36ch; }
+    footer.site-foot .foot-brand p { max-width: 460px; }
     footer.site-foot ul { list-style: none; padding: 0; margin: 0; }
     footer.site-foot li + li { margin-top: 8px; }
     footer.site-foot a {
-      color: #FFF9F0;
-      text-decoration: underline;
-      text-underline-offset: 3px;
+      color: #4A4F57;
+      text-decoration: none;
+      border-bottom: 1px solid #C9CCD1;
     }
-    footer.site-foot a:hover { color: #F0E6D4; }
+    footer.site-foot a:hover { color: #0B5269; border-bottom-color: #0B5269; }
     footer.site-foot .legal {
-      border-top: 1px solid #2F4F43;
+      border-top: 1px solid #DEDFE2;
       margin-top: 36px;
       padding-top: 18px;
       font-family: "Source Sans 3", system-ui, sans-serif !important;
-      font-size: 13px !important;
-      line-height: 1.55;
-      color: #E7DDCB;
+      font-size: 12.5px !important;
+      line-height: 1.7;
+      color: #6A6F77;
     }
     @media (max-width: 800px) {
       footer.site-foot .foot-grid { grid-template-columns: 1fr; gap: 28px; }
-    }
-    .offer-panel .band-head { grid-template-columns: 1fr; }
-    .offer-panel .band-head .intro { max-width: none; }
-    .hero {
-      background: #FFFEF9;
-    }
-    .hero .strip {
-      background: #F8F4EC;
-      color: #1A1714;
-      margin-top: 52px;
-      border-radius: 4px;
-      border-top: 2px solid #B08D57;
-      padding: 24px 8px 24px 24px;
-      font-variant-numeric: tabular-nums lining-nums;
-    }
-    .hero .strip .cell { padding-top: 0; }
-    .hero .strip .cell + .cell { border-left: 1px solid #C9BBA3; }
-    .hero .strip .cell b {
-      color: #7A6540;
-      font-size: 13px;
-      letter-spacing: 0.1em;
-      font-weight: 700;
-      font-variant-numeric: tabular-nums lining-nums;
-      margin-bottom: 8px;
-    }
-    .hero .strip .cell span { color: #6B6256; }
-    @media (max-width: 880px) {
-      .hero .strip { margin-top: 36px; padding: 8px 20px; }
-      .hero .strip .cell { padding: 16px 0; }
-      .hero .strip .cell + .cell { border-left: 0; border-top: 1px solid #C9BBA3; }
-    }
-    .ai-models { margin: 18px 0 0; }
-    .ai-models-cap {
-      font-size: 12px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 600;
-      color: var(--muted);
-      margin: 0 0 12px;
-    }
-    .ai-models-row {
-      display: flex;
-      flex-wrap: nowrap;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-    }
-    .ai-models-lockup {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: Georgia, serif;
-      font-size: 16px;
-      color: var(--ink);
-      white-space: nowrap;
-    }
-    .ai-models-row img { height: 26px; width: auto; max-width: 180px; display: block; }
-    @media (max-width: 800px) {
-      .offer-tabs { grid-template-columns: 1fr; }
-      .ai-models-row { flex-wrap: wrap; justify-content: flex-start; row-gap: 16px; }
     }
 
     a.page-edit {
@@ -426,7 +602,7 @@
       z-index: 40;
       right: 18px;
       bottom: 18px;
-      background: #1F3D32;
+      background: #46382A;
       color: #FFF9F0;
       font-family: "Source Sans 3", system-ui, sans-serif;
       font-size: 14px;
@@ -435,7 +611,7 @@
       padding: 10px 16px;
       border-radius: 5px;
     }
-    a.page-edit:hover { background: #18332A; }
+    a.page-edit:hover { background: #3E3125; }
   </style>
 </head>
 <body>
@@ -443,7 +619,7 @@
     <div class="wrap nav">
       <a class="logo" href="index.html" aria-label="Dominic Andreas, CPA"><span class="lockup"><img class="wordmark-da" src="da-monogram.png" alt="" height="40"><span class="lockup-name"><span class="lockup-word">DOMINIC ANDREAS</span><span class="logo-cred">CPA</span></span></span></a>
       <nav class="nav-right" aria-label="Primary">
-        <a href="index.html#services">Services</a>
+        <a href="#services">Services</a>
         <a href="background.html">Background</a>
         <a href="blog/index.html">Blog</a>
         <a href="contact.html">Contact</a>
@@ -456,15 +632,14 @@
       <div class="wrap">
         <p class="small hero-kicker">AI CONSULTANT · certified public accountant</p>
         <h1 id="hero-title">AI-first leadership that fuels growth — when you need it, for as long as you need it.</h1>
-        <div class="hero-top">
-          <p class="lead">Leadership and targeted support for startups, small and medium-sized businesses, and other organizations.<br><br>I support four core areas:<br>• AI and automation advisory, operations, and governance<br>• Internal audit and Sarbanes-Oxley (SOX) controls<br>• System and Organization Controls (SOC) examinations<br>• Accounting closes and financial reporting<br><br>AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p></div>
-        <div class="cta-row">
+        <div class="hero-grid"><div class="hero-intro"><p class="lead">Leadership and targeted support for startups, small and medium-sized businesses, and other organizations.</p><p class="lead stmt">AI has arrived as leverage, and this is the window to use it. Lead the change with a trusted advisor and operator beside you.</p><div class="cta-row">
           <a class="btn btn-line" href="#services">See the services</a>
           <a class="btn" href="contact.html">Book a fit call</a>
-        </div>
+        </div></div><div class="hero-core"><p class="core-areas-kicker">I support four core areas:</p><ul><li>AI and automation advisory, operations, and governance</li><li>Internal audit and Sarbanes-Oxley (SOX) controls</li><li>System and Organization Controls (SOC) examinations</li><li>Accounting closes and financial reporting</li></ul></div></div>
+        
         <div class="strip" role="list">
-          <div class="cell" role="listitem"><b>CPA</b><span>Licensed Certified Public Accountant</span></div>
           <div class="cell" role="listitem"><b>11+</b><span>Years of audit, accounting, finance, and quality leadership</span></div>
+          <div class="cell" role="listitem"><b>CPA</b><span>Licensed Certified Public Accountant</span></div>
           <div class="cell" role="listitem"><b>Human-led · scoped engagements · remote</b><span>Technical, innovative, practical, and accountable<br></span></div>
           <div class="cell" role="listitem"><b>INDUSTRIES</b><span>Financial services, technology, consumer products and goods, nonprofit, government, healthcare, and beyond</span></div>
         </div>
@@ -473,20 +648,17 @@
 
     <section class="band" id="services" aria-labelledby="services-title">
       <div class="wrap">
-        <p class="small offer-kicker"><span style="font-size: 13px;">services</span></p>
+        <p class="small offer-kicker">Services</p>
         <p class="offer-note">Click each service to see how I support it</p>
         <div class="offer-tabs" role="tablist" aria-label="Services">
-          <button type="button" class="offer-tab" role="tab" id="tab-automation" aria-selected="true" aria-controls="panel-automation"><span class="tab-n">01</span>AI and automation<span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
-          <button type="button" class="offer-tab" role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services"><span class="tab-n">02</span>Audit support and controls<span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
-          <button type="button" class="offer-tab" role="tab" id="tab-filings" aria-selected="false" aria-controls="panel-filings"><span class="tab-n">03</span>Accounting and financial reporting<span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+          <button type="button" class="offer-tab" role="tab" id="tab-automation" aria-selected="true" aria-controls="panel-automation"><span class="tab-n">01</span><span class="tab-label">AI and automation</span><span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+          <button type="button" class="offer-tab" role="tab" id="tab-services" aria-selected="false" aria-controls="panel-services"><span class="tab-n">02</span><span class="tab-label">Audit support and controls</span><span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
+          <button type="button" class="offer-tab" role="tab" id="tab-filings" aria-selected="false" aria-controls="panel-filings"><span class="tab-n">03</span><span class="tab-label">Accounting and financial reporting</span><span class="card-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></span></button>
         </div>
         <div class="offer-panel" id="panel-services" role="tabpanel" aria-labelledby="tab-services" hidden="">
         <div class="band-head">
-          <div>
-            <h2 id="services-title">Internal audit, SOX, and SOC capacity that closes findings</h2>
-            <p class="intro">Planning, testing, reporting, and follow-up so findings close and the file holds up. Through the audit cycle, we also coordinate with external auditors — PBC request tracking, workpapers, evidence assembly, and clear communication.</p>
-          </div>
-        </div>
+          
+        <h2 id="services-title">Internal audit, SOX, and SOC capacity that closes findings</h2><p class="intro">Planning, testing, reporting, and follow-up so findings close and the file holds up. Through the audit cycle, we also coordinate with external auditors — PBC request tracking, workpapers, evidence assembly, and clear communication.</p></div>
         <div class="stack">
           <article class="item">
             <div class="n">01</div>
@@ -513,13 +685,9 @@
         </div>
         <div class="offer-panel" id="panel-automation" role="tabpanel" aria-labelledby="tab-automation">
         <div class="band-head">
-          <div>
-            <h2 id="automation-title">AI that is governed, reviewed, and in production</h2>
-            <p class="intro">Integrating tools such as AI and workflow automation can increase productivity and efficiency, reduce administrative load, and free up time for higher-value or professional judgment work. I help adopt or deepen AI that is governed, reviewed, and documented.&nbsp;</p>
-          </div>
-        </div>
-
-<div class="stack"><article class="item"><div class="n">01</div><h3>Fractional AI lead</h3><p>Advisory and implementation support covering data wrangling, strategic roadmap development, AI setup, operating practices, workflow design, periodic planning reviews, training, and coordination.<br>• Scope can include the following, where they add value:<br><span class="ai-chips" contenteditable="false"><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6.2h14v9.5H9.4L5 19.2V6.2z"></path></svg>Conversational agents</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="2.3"></circle><path d="M4.6 17c.5-2.6 2.3-4 4.4-4s3.9 1.4 4.4 4"></path><circle cx="16.2" cy="8.4" r="1.9"></circle><path d="M13.2 17c.3-1.7 1.5-3 3-3.2 1.6.2 2.8 1.4 3.2 3.2"></path></svg>Agent or bot teams</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h2.4l.8 2.6-1.6.9a10 10 0 0 0 5.4 5.4l.9-1.6 2.6.8v2.4c0 .7-.6 1.4-1.4 1.4C9.2 16.1 6.4 13.3 6.4 5.4 6.4 4.6 7 4 7.8 4Z"></path></svg>Voice agents</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.2" height="6.2" rx="1"></rect><rect x="13.8" y="4" width="6.2" height="6.2" rx="1"></rect><rect x="4" y="13.8" width="6.2" height="6.2" rx="1"></rect><rect x="13.8" y="13.8" width="6.2" height="6.2" rx="1"></rect></svg>Custom internal tools &amp; dashboards</span><span class="ai-chip"><span class="ai-chip-sigma" aria-hidden="true">Σ</span>Excel macros &amp; templates</span></span><br>Voice agents can include an AI receptionist for missed or after-hours calls.<br>• Draft and maintain AI rules and policies, designate control owners, and define review practices you can adopt.</p></article>
+          
+        <h2 id="automation-title">AI that is governed, reviewed, and in production</h2><p class="intro">Integrating tools such as AI and workflow automation can increase productivity and efficiency, reduce administrative load, and free up time for higher-value or professional judgment work. I help adopt or deepen AI that is governed, reviewed, and documented.&nbsp;</p></div>
+        <div class="stack"><article class="item"><div class="n">01</div><h3>Fractional AI lead</h3><p>Advisory and implementation support covering data wrangling, strategic roadmap development, AI setup, operating practices, workflow design, periodic planning reviews, training, and coordination.<br>• Scope can include the following, where they add value:<br><span class="ai-chips" contenteditable="false"><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 6.2h14v9.5H9.4L5 19.2V6.2z"></path></svg>Conversational agents</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="2.3"></circle><path d="M4.6 17c.5-2.6 2.3-4 4.4-4s3.9 1.4 4.4 4"></path><circle cx="16.2" cy="8.4" r="1.9"></circle><path d="M13.2 17c.3-1.7 1.5-3 3-3.2 1.6.2 2.8 1.4 3.2 3.2"></path></svg>Agent or bot teams</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h2.4l.8 2.6-1.6.9a10 10 0 0 0 5.4 5.4l.9-1.6 2.6.8v2.4c0 .7-.6 1.4-1.4 1.4C9.2 16.1 6.4 13.3 6.4 5.4 6.4 4.6 7 4 7.8 4Z"></path></svg>Voice agents</span><span class="ai-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6.2" height="6.2" rx="1"></rect><rect x="13.8" y="4" width="6.2" height="6.2" rx="1"></rect><rect x="4" y="13.8" width="6.2" height="6.2" rx="1"></rect><rect x="13.8" y="13.8" width="6.2" height="6.2" rx="1"></rect></svg>Custom internal tools &amp; dashboards</span><span class="ai-chip"><span class="ai-chip-sigma" aria-hidden="true">Σ</span>Excel macros &amp; templates</span></span>Voice agents can include an AI receptionist for missed or after-hours calls.<br>• Draft and maintain AI rules and policies, designate control owners, and define review practices you can adopt.</p></article>
           <article class="item">
             <div class="n">02</div>
             <h3>Use case assessment and quality review</h3>
@@ -539,25 +707,12 @@
             <div class="n">05</div>
             <h3>Thought leadership and digital content</h3>
             <p>Research, drafting, and professional human review of selected articles, blog posts, and LinkedIn social content, prior to publication.</p>
-          </article></div>
-        <div class="ai-models">
-          <p class="ai-models-cap">Frontier AI examples</p>
-          <div class="ai-models-row">
-            <img alt="SpaceXAI" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDgiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAxMDggMjIiPjx0ZXh0IHg9IjAiIHk9IjE3IiBmb250LWZhbWlseT0iR2VvcmdpYSwgc2VyaWYiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiMxYzE5MTUiPlNwYWNlWEFJPC90ZXh0Pjwvc3ZnPg==">
-    <span class="ai-models-lockup"><img alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMjQwNiAyNDA2Ij4KCTxwYXRoIGQ9Ik0xIDU3OC40QzEgMjU5LjUgMjU5LjUgMSA1NzguNCAxaDEyNDkuMWMzMTkgMCA1NzcuNSAyNTguNSA1NzcuNSA1NzcuNFYyNDA2SDU3OC40QzI1OS41IDI0MDYgMSAyMTQ3LjUgMSAxODI4LjZWNTc4LjR6IiBmaWxsPSIjNzRhYTljIi8+Cgk8cGF0aCBpZD0iYSIgZD0iTTExMDcuMyAyOTkuMWMtMTk3Ljk5OSAwLTM3My45IDEyNy4zLTQzNS4yIDMxNS4zTDY1MCA3NDMuNXY0MjcuOWMwIDIxLjQgMTEgNDAuNCAyOS40IDUxLjRsMzQ0LjUgMTk4LjUxNVY4MzMuM2guMXYtMjcuOUwxMzcyLjcgNjA0YzMzLjcxNS0xOS41MiA3MC40NC0zMi44NTcgMTA4LjQ3LTM5LjgyOEwxNDQ3LjYgNDUwLjNDMTM2MSAzNTMuNSAxMjM3LjEgMjk4LjUgMTEwNy4zIDI5OS4xem0wIDExNy41LS42LjZjNzkuNjk5IDAgMTU2LjMgMjcuNSAyMTcuNiA3OC40LTIuNSAxLjItNy40IDQuMy0xMSA2LjFMOTUyLjggNzA5LjNjLTE4LjQgMTAuNC0yOS40IDMwLTI5LjQgNTEuNFYxMjQ4bC0xNTUuMS04OS40Vjc1NS44Yy0uMS0xODcuMDk5IDE1MS42MDEtMzM4LjkgMzM5LTMzOS4yeiIgZmlsbD0iI2ZmZiIvPgoJPHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoNjAgMTIwMyAxMjAzKSIvPgogIAk8dXNlIHhsaW5rOmhyZWY9IiNhIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjAgMTIwMyAxMjAzKSIvPgoJPHVzZSB4bGluazpocmVmPSIjYSIgdHJhbnNmb3JtPSJyb3RhdGUoMTgwIDEyMDMgMTIwMykiLz4KCTx1c2UgeGxpbms6aHJlZj0iI2EiIHRyYW5zZm9ybT0icm90YXRlKDI0MCAxMjAzIDEyMDMpIi8+Cgk8dXNlIHhsaW5rOmhyZWY9IiNhIiB0cmFuc2Zvcm09InJvdGF0ZSgzMDAgMTIwMyAxMjAzKSIvPgoKPC9zdmc+"><span>OpenAI</span></span>
-    <img alt="Anthropic" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDI0LjIiIGhlaWdodD0iMTE1IiB2aWV3Qm94PSIwIDAgMTAyNC4yIDExNSI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6IzFmMWYxZTt9PC9zdHlsZT48L2RlZnM+PHBhdGggY2xhc3M9ImEiIGQ9Ik0yNTAuNjQ5LDIzLjM0OTRoMzcuMzI4VjExMy4wOTRoMjMuODI1VjIzLjM0OTRIMzQ5LjEzVjEuOTA2MUgyNTAuNjQ5WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjA4LjU1Nyw3OS43Mzc2LDE1OC41MjIsMS45MDYxSDEzMS41MTlWMTEzLjA5NGgyMy4wMzJWMzUuMjYyNGw1MC4wMzUsNzcuODMxNmgyNy4wMDJWMS45MDYxSDIwOC41NTdaIi8+PHBhdGggY2xhc3M9ImEiIGQ9Ik00NDQuNDM0LDQ2LjIyMjRIMzkyLjAxN1YxLjkwNjFIMzY4LjE5MVYxMTMuMDk0aDIzLjgyNlY2Ny42NjU3aDUyLjQxN1YxMTMuMDk0SDQ2OC4yNlYxLjkwNjFINDQ0LjQzNFoiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTQ0LjMxNjMsMS45MDYxLDAsMTEzLjA5NEgyNC43NzlsOS4wNjM0LTIzLjM0OTVIODAuMjA2MUw4OS4yNjgsMTEzLjA5NGgyNC43NzlMNjkuNzMwNywxLjkwNjFaTTQxLjg1NzUsNjkuMDk1M2wxNS4xNjYtMzkuMDc0Nkw3Mi4xOSw2OS4wOTUzWiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNNjY1LjY5OCwwYy0zMi4wODYsMC01NC44LDIzLjgyNi01NC44LDU3LjY1ODgsMCwzMy41MTUyLDIyLjcxNCw1Ny4zNDEyLDU0LjgsNTcuMzQxMiwzMS45MjYsMCw1NC40ODItMjMuODI2LDU0LjQ4Mi01Ny4zNDEyQzcyMC4xOCwyMy44MjYsNjk3LjYyNCwwLDY2NS42OTgsMFptMCw5Mi43NjI0Yy0xOC43NDQsMC0zMC4xOC0xMy4zNDI1LTMwLjE4LTM1LjEwMzYsMC0yMi4wNzg3LDExLjQzNi0zNS40MjEyLDMwLjE4LTM1LjQyMTIsMTguNTg0LDAsMjkuODYxLDEzLjM0MjUsMjkuODYxLDM1LjQyMTJDNjk1LjU1OSw3OS40Miw2ODQuMjgyLDkyLjc2MjQsNjY1LjY5OCw5Mi43NjI0WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNOTk4Ljc4NSw3NS43NjY2Yy00LjEzLDEwLjgwMTEtMTIuMzksMTYuOTk1OC0yMy42NjgsMTYuOTk1OC0xOC43NDMsMC0zMC4xNzktMTMuMzQyNS0zMC4xNzktMzUuMTAzNiwwLTIyLjA3ODcsMTEuNDM2LTM1LjQyMTIsMzAuMTc5LTM1LjQyMTIsMTEuMjc4LDAsMTkuNTM4LDYuMTk0NywyMy42NjgsMTYuOTk1OGgyNS4yNTVDMTAxNy44NSwxNS40MDc1LDk5OS4yNjEsMCw5NzUuMTE3LDBjLTMyLjA4NSwwLTU0Ljc5OSwyMy44MjYtNTQuNzk5LDU3LjY1ODhDOTIwLjMxOCw5MS4xNzQsOTQzLjAzMiwxMTUsOTc1LjExNywxMTUsOTk5LjQyLDExNSwxMDE4LDk5LjQzMzcsMTAyNC4yLDc1Ljc2NjZaIi8+PHBhdGggY2xhc3M9ImEiIGQ9Ik04NDYuOTM0LDEuOTA2MSw4OTEuMjUsMTEzLjA5NGgyNC4zMDJMODcxLjIzNiwxLjkwNjFaIi8+PHBhdGggY2xhc3M9ImEiIGQ9Ik03OTYuNzQsMS45MDYxSDc0Mi40MTdWMTEzLjA5NGgyMy44MjZWNzIuNzQ4Nkg3OTYuNzRjMjUuMjU2LDAsNDAuNjYzLTEzLjM0MjUsNDAuNjYzLTM1LjQyMTNTODIxLjk5NiwxLjkwNjEsNzk2Ljc0LDEuOTA2MVptLTEuMTEyLDQ5LjM5OTFINzY2LjI0M1YyMy4zNDk0aDI5LjM4NWMxMS43NTUsMCwxNy45NDksNC43NjUyLDE3Ljk0OSwxMy45Nzc5UzgwNy4zODMsNTEuMzA1Miw3OTUuNjI4LDUxLjMwNTJaIi8+PHBhdGggY2xhc3M9ImEiIGQ9Ik01OTIuNjMxLDM1LjczODljMC0yMC45NjY4LTE1LjQwNy0zMy44MzI4LTQwLjY2My0zMy44MzI4SDQ5Ny42NDVWMTEzLjA5NGgyMy44MjZWNjkuNTcxOGgyNi41MjVsMjMuODI3LDQzLjUyMjJoMjYuMzY4TDU3MS44MDcsNjYuMjU2OEM1ODUuMDUsNjEuMTY2LDU5Mi42MzEsNTAuNDQ1OSw1OTIuNjMxLDM1LjczODlabS03MS4xNi0xMi4zOWgyOS4zODVjMTEuNzU0LDAsMTcuOTQ5LDQuMjg4NywxNy45NDksMTIuMzlzLTYuMTk1LDEyLjM5LTE3Ljk0OSwxMi4zOUg1MjEuNDcxWiIvPjwvc3ZnPg==">
-    <span class="ai-models-lockup"><img alt="Microsoft" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMyAyMyI+PHBhdGggZmlsbD0iI2YzZjNmMyIgZD0iTTAgMGgyM3YyM0gweiIvPjxwYXRoIGZpbGw9IiNmMzUzMjUiIGQ9Ik0xIDFoMTB2MTBIMXoiLz48cGF0aCBmaWxsPSIjODFiYzA2IiBkPSJNMTIgMWgxMHYxMEgxMnoiLz48cGF0aCBmaWxsPSIjMDVhNmYwIiBkPSJNMSAxMmgxMHYxMEgxeiIvPjxwYXRoIGZpbGw9IiNmZmJhMDgiIGQ9Ik0xMiAxMmgxMHYxMEgxMnoiLz48L3N2Zz4="><img alt="Copilot" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3OCIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDc4IDIyIj48dGV4dCB4PSIwIiB5PSIxNyIgZm9udC1mYW1pbHk9Ikdlb3JnaWEsIHNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSIjMWMxOTE1Ij5Db3BpbG90PC90ZXh0Pjwvc3ZnPg=="></span>
-    <img alt="Google" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjcyIDkyIiB3aWR0aD0iMjcyIiBoZWlnaHQ9IjkyIj48cGF0aCBmaWxsPSIjRUE0MzM1IiBkPSJNMTE1Ljc1IDQ3LjE4YzAgMTIuNzctOS45OSAyMi4xOC0yMi4yNSAyMi4xOHMtMjIuMjUtOS40MS0yMi4yNS0yMi4xOEM3MS4yNSAzNC4zMiA4MS4yNCAyNSA5My41IDI1czIyLjI1IDkuMzIgMjIuMjUgMjIuMTh6bS05Ljc0IDBjMC03Ljk4LTUuNzktMTMuNDQtMTIuNTEtMTMuNDRTODAuOTkgMzkuMiA4MC45OSA0Ny4xOGMwIDcuOSA1Ljc5IDEzLjQ0IDEyLjUxIDEzLjQ0czEyLjUxLTUuNTUgMTIuNTEtMTMuNDR6Ii8+PHBhdGggZmlsbD0iI0ZCQkMwNSIgZD0iTTE2My43NSA0Ny4xOGMwIDEyLjc3LTkuOTkgMjIuMTgtMjIuMjUgMjIuMThzLTIyLjI1LTkuNDEtMjIuMjUtMjIuMThjMC0xMi44NSA5Ljk5LTIyLjE4IDIyLjI1LTIyLjE4czIyLjI1IDkuMzIgMjIuMjUgMjIuMTh6bS05Ljc0IDBjMC03Ljk4LTUuNzktMTMuNDQtMTIuNTEtMTMuNDRzLTEyLjUxIDUuNDYtMTIuNTEgMTMuNDRjMCA3LjkgNS43OSAxMy40NCAxMi41MSAxMy40NHMxMi41MS01LjU1IDEyLjUxLTEzLjQ0eiIvPjxwYXRoIGZpbGw9IiM0Mjg1RjQiIGQ9Ik0yMDkuNzUgMjYuMzR2MzkuODJjMCAxNi4zOC05LjY2IDIzLjA3LTIxLjA4IDIzLjA3LTEwLjc1IDAtMTcuMjItNy4xOS0xOS42Ni0xMy4wN2w4LjQ4LTMuNTNjMS41MSAzLjYxIDUuMjEgNy44NyAxMS4xNyA3Ljg3IDcuMzEgMCAxMS44NC00LjUxIDExLjg0LTEzdi0zLjE5aC0uMzRjLTIuMTggMi42OS02LjM4IDUuMDQtMTEuNjggNS4wNC0xMS4wOSAwLTIxLjI1LTkuNjYtMjEuMjUtMjIuMDkgMC0xMi41MiAxMC4xNi0yMi4yNiAyMS4yNS0yMi4yNiA1LjI5IDAgOS40OSAyLjM1IDExLjY4IDQuOTZoLjM0di0zLjYxaDkuMjV6bS04LjU2IDIwLjkyYzAtNy44MS01LjIxLTEzLjUyLTExLjg0LTEzLjUyLTYuNzIgMC0xMi4zNSA1LjcxLTEyLjM1IDEzLjUyIDAgNy43MyA1LjYzIDEzLjM2IDEyLjM1IDEzLjM2IDYuNjMgMCAxMS44NC01LjYzIDExLjg0LTEzLjM2eiIvPjxwYXRoIGZpbGw9IiMzNEE4NTMiIGQ9Ik0yMjUgM3Y2NWgtOS41VjNoOS41eiIvPjxwYXRoIGZpbGw9IiNFQTQzMzUiIGQ9Ik0yNjIuMDIgNTQuNDhsNy41NiA1LjA0Yy0yLjQ0IDMuNjEtOC4zMiA5LjgzLTE4LjQ4IDkuODMtMTIuNiAwLTIyLjAxLTkuNzQtMjIuMDEtMjIuMTggMC0xMy4xOSA5LjQ5LTIyLjE4IDIwLjkyLTIyLjE4IDExLjUxIDAgMTcuMTQgOS4xNiAxOC45OCAxNC4xMWwxLjAxIDIuNTItMjkuNjUgMTIuMjhjMi4yNyA0LjQ1IDUuOCA2LjcyIDEwLjc1IDYuNzIgNC45NiAwIDguNC0yLjQ0IDEwLjkyLTYuMTR6bS0yMy4yNy03Ljk4bDE5LjgyLTguMjNjLTEuMDktMi43Ny00LjM3LTQuNy04LjIzLTQuNy00Ljk1IDAtMTEuODQgNC4zNy0xMS41OSAxMi45M3oiLz48cGF0aCBmaWxsPSIjNDI4NUY0IiBkPSJNMzUuMjkgNDEuNDFWMzJINjdjLjMxIDEuNjQuNDcgMy41OC40NyA1LjY4IDAgNy4wNi0xLjkzIDE1Ljc5LTguMTUgMjIuMDEtNi4wNSA2LjMtMTMuNzggOS42Ni0yNC4wMiA5LjY2QzE2LjMyIDY5LjM1LjM2IDUzLjg5LjM2IDM0LjkxLjM2IDE1LjkzIDE2LjMyLjQ3IDM1LjMuNDdjMTAuNSAwIDE3Ljk4IDQuMTIgMjMuNiA5LjQ5bC02LjY0IDYuNjRjLTQuMDMtMy43OC05LjQ5LTYuNzItMTYuOTctNi43Mi0xMy44NiAwLTI0LjcgMTEuMTctMjQuNyAyNS4wMyAwIDEzLjg2IDEwLjg0IDI1LjAzIDI0LjcgMjUuMDMgOC45OSAwIDE0LjExLTMuNjEgMTcuMzktNi44OSAyLjY2LTIuNjYgNC40MS02LjQ2IDUuMS0xMS42NWwtMjIuNDkuMDF6Ii8+PC9zdmc+Cg==">
-          </div>
-        </div>
+          </article></div><div class="ai-models"><p class="ai-models-cap">Frontier AI examples</p><div class="ai-models-row"><span class="ai-models-name">SpaceXAI</span><span class="ai-models-name">OpenAI</span><span class="ai-models-name">Anthropic</span><span class="ai-models-name">Microsoft Copilot</span><span class="ai-models-name">Google</span></div></div>
         </div>
         <div class="offer-panel" id="panel-filings" role="tabpanel" aria-labelledby="tab-filings" hidden="">
         <div class="band-head">
-          <div>
-            <h2 id="filings-title">Accounting close, reporting, SEC filings, and more for lean teams</h2>
-            <p class="intro">Accounting and period-end closes, financial reporting, and SEC filings — for when the work has to hold up. Through the audit cycle, we also coordinate with external auditors — PBC request tracking, workpapers, evidence assembly, and clear communication.</p>
-          </div>
-        </div>
+          
+        <h2 id="filings-title">Accounting close, reporting, SEC filings, and more for lean teams</h2><p class="intro">Accounting and period-end closes, financial reporting, and SEC filings — for when the work has to hold up. Through the audit cycle, we also coordinate with external auditors — PBC request tracking, workpapers, evidence assembly, and clear communication.</p></div>
         <div class="stack">
           <article class="item">
             <div class="n">01</div>
@@ -577,14 +732,13 @@
           <article class="item">
             <div class="n">04</div>
             <h3>Technical accounting support</h3>
-            <p>Clear memo-ready analysis on complex or first-time topics.<br>• Research and documentation for complex GAAP or disclosure questions, and support. For example, when new to SEC reporting or adopting new accounting standards.</p>
+            <p>Clear memo-ready analysis on complex or first-time topics. <br>• Research and documentation for complex GAAP or disclosure questions, and support. For example, when new to SEC reporting or adopting new accounting standards.</p>
           </article>
         </div>
         <p class="close">Once the process is sound, repeatable steps can be automated, with governance and quality gates.</p>
         </div>
       </div>
     </section>
-    
 
     <section class="band" id="engagements" aria-labelledby="engagements-title">
       <div class="wrap">
@@ -592,30 +746,33 @@
         <h2 id="engagements-title">Call → scope → start → delivered</h2>
         <div class="stack">
           <article class="item">
+            
             <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3.8h2.6l.9 2.8-1.7 1a11 11 0 0 0 5.9 5.9l1-1.7 2.8.9v2.6c0 .8-.7 1.5-1.5 1.5C9.4 17.8 6.2 14.6 6.2 5.3 6.2 4.5 6.9 3.8 7.7 3.8Z"></path></svg></div><div class="n">01</div>
-            <h3>Free 20-minute call</h3>
-            <p>Align on goals, challenges, and priorities.</p>
+            <h3>Free 20-minute call</h3><p>Align on goals, challenges, and priorities.</p>
+            
           </article>
           <article class="item">
+            
             <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L8.2 17.8 4 19l1.2-4.2L16.5 3.5z"></path><path d="M14.8 5.2 18.8 9.2"></path></svg></div><div class="n">02</div>
-            <h3>Written scope</h3>
-            <p>Clear scope, timeline, and investment before work begins.</p>
+            <h3>Written scope</h3><p>Clear scope, timeline, and investment before work begins.</p>
+            
           </article>
           <article class="item">
+            
             <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5.5" y="10.5" width="13" height="9.5" rx="1.8"></rect><path d="M8.2 10.5V8.2a3.8 3.8 0 0 1 7.6 0v2.3"></path></svg></div><div class="n">03</div>
-            <h3>Get set up</h3>
-            <p>Fully remote, with no unnecessary steps. I use dedicated equipment, share files securely, and work within your systems with only the access needed.</p>
+            <h3>Get set up</h3><p>Fully remote, with no unnecessary steps. I use dedicated equipment, share files securely, and can work within your systems with only the access needed.</p>
+            
           </article>
           <article class="item">
+            
             <div class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 12.2 10.2 16l7.3-8"></path></svg></div><div class="n">04</div>
-            <h3>Delivered</h3>
-            <p>Each engagement includes a walkthrough and revision rounds, with attention to professional standards, quality, and risk. Ongoing support is available as needed.</p>
+            <h3>Delivered</h3><p>Each engagement includes a walkthrough and revision rounds, with attention to professional standards, quality, and risk. Ongoing support is available as needed.</p>
+            
           </article>
         </div>
         <div class="cta-row eng-cta">
           <a class="btn" href="contact.html">Book a fit call</a>
         </div>
-        
       </div>
     </section>
 

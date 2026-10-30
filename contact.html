@@ -6,24 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Dominic Andreas, CPA</title>
   <meta name="description" content="Free 20-minute call to see if it is a fit. Independent internal audit, GRC, and governed automation support." />
-  <meta name="theme-color" content="#1F3D32" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%231F3D32'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#46382A" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%2346382A'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="site.css" />
   <style id="page-css">
     :root {
-      --forest: #1F3D32;
-      --forest-2: #18332A;
+      --forest: #46382A;
+      --forest-2: #3E3125;
       --leaf: #7A6540;
       --ink: #1A1714;
       --muted: #6B6256;
       --line: #D6CCBC;
-      --paper: #FFFEF9;
-      --panel: #FFFEF9;
-      --gold: #1F3D32;
+      --paper: #FFFFFF;
+      --panel: #FFFFFF;
+      --gold: #46382A;
       --rule: #D6CCBC;
     }
     body, .small, .logo, button, input, select, textarea, label {
@@ -32,24 +31,25 @@
     h1, h2, h3, h1.page-title, .contact-copy h1 {
       font-family: "Source Serif 4", Georgia, serif !important;
     }
-    header { background: #FFFEF9; }
-    .dot { background: #1F3D32 !important; }
-    .logo svg, .logo img.wordmark, .logo img.wordmark-da { display: block; height: 40px; width: auto; max-width: none; flex-shrink: 0; }
+    header { background: #FFFFFF; }
+    .dot { background: #46382A !important; }
+    .logo svg, .logo img.wordmark, .logo img.wordmark-da { display: block; height: 34px; width: auto; max-width: none; flex-shrink: 0; }
     .logo .lockup {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
     .logo .lockup-name {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 3px;
+      align-items: flex-start;
+      gap: 4px;
+      line-height: 1;
     }
     .logo .lockup-word,
     .logo .logo-cred {
-      font-family: "Montserrat", "Century Gothic", sans-serif !important;
+      font-family: "Inter", system-ui, sans-serif !important;
       font-weight: 600;
       line-height: 1;
       white-space: nowrap;
@@ -62,12 +62,12 @@
     .logo .logo-cred {
       font-size: 10px;
       letter-spacing: 0.22em;
-      color: #46382A;
+      color: #0B5269;
     }
-    .btn { background: #1F3D32 !important; color: #FFF9F0 !important; border-radius: 5px; }
-    .btn:hover { background: #18332A !important; }
-    .btn-line { background: transparent; color: #7A6540; border-color: rgba(31,61,50,0.5); border-radius: 5px; }
-    .btn-line:hover { background: rgba(31,61,50,0.08); color: #1A1714; }
+    .btn { background: #0B5269 !important; color: #FFF9F0 !important; border-radius: 5px; }
+    .btn:hover { background: #083F51 !important; }
+    .btn-line { background: transparent; color: #7A6540; border-color: rgba(70,56,42,0.5); border-radius: 5px; }
+    .btn-line:hover { background: rgba(70,56,42,0.08); color: #1A1714; }
     .contact-copy .desk-still {
       display: block;
       width: min(100%, 280px);
@@ -76,17 +76,18 @@
       object-fit: cover;
       object-position: center 32%;
     }
-      a.page-edit { position: fixed; z-index: 40; right: 18px; bottom: 18px; background: #1F3D32; color: #FFF9F0; font-size: 14px; font-weight: 600; text-decoration: none; padding: 10px 16px; border-radius: 5px; }
-    a.page-edit:hover { background: #18332A; }
-    .contact-copy .intro { max-width: 62ch; }
-    #contact .wrap {
+      a.page-edit { position: fixed; z-index: 40; right: 18px; bottom: 18px; background: #46382A; color: #FFF9F0; font-size: 14px; font-weight: 600; text-decoration: none; padding: 10px 16px; border-radius: 5px; }
+    a.page-edit:hover { background: #3E3125; }
+    .contact-copy .intro { max-width: none; }
+    .contact-hero { margin-bottom: 20px; }
+    .contact-actions {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      column-gap: 48px;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
       align-items: start;
     }
-    .contact-hero { margin-bottom: 20px; }
     .booking-block { margin: 0; }
+    .contact-actions .small { margin: 0; }
     .offer-line {
       margin: 0 0 16px;
       max-width: 62ch;
@@ -95,33 +96,28 @@
       color: #3A352E;
     }
     .write-in {
-      grid-column: 2;
-      grid-row: 1 / span 2;
-      border-top: none;
       border-left: 1px solid var(--rule);
-      padding-top: 0;
-      padding-left: 40px;
+      padding-left: 48px;
       max-width: none;
     }
     @media (max-width: 800px) {
-      #contact .wrap { grid-template-columns: 1fr; }
+      .contact-actions { grid-template-columns: 1fr; gap: 36px; }
       .write-in {
-        grid-column: 1;
-        grid-row: auto;
-        border-left: none;
+        border-left: 0;
         border-top: 1px solid var(--rule);
         padding-left: 0;
-        padding-top: 40px;
-        margin-top: 36px;
+        padding-top: 36px;
       }
     }
     .write-in h2 {
-      font-size: clamp(24px, 3vw, 32px);
-      margin: 8px 0 14px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin: 12px 0 16px;
     }
     .write-in .email-link,
     .guide-offer .email-link {
-      color: #1F3D32;
+      color: #46382A;
       font-weight: 600;
       text-decoration: underline;
       text-underline-offset: 3px;
@@ -172,11 +168,11 @@
       position: absolute;
       inset: 0;
       border-radius: 5px;
-      background: #1F3764;
+      background: linear-gradient(160deg, #0B5269, #083F51);
       color: #FFF9F0;
       padding: 20px 18px;
       box-sizing: border-box;
-      box-shadow: 0 8px 22px rgba(31, 55, 100, 0.28);
+      box-shadow: 0 8px 22px rgba(11, 82, 105, 0.22);
       border: 1px solid rgba(154, 123, 74, 0.35);
     }
     .guide-front .guide-k {
@@ -222,7 +218,7 @@
     .guide-offer .guide-txt .small {
       margin: 0 0 8px;
       font-size: 12px !important;
-      color: #7A6540;
+      color: #0B5269;
     }
     .guide-offer .guide-txt h2 {
       font-family: "Source Serif 4", Georgia, serif !important;
@@ -264,7 +260,7 @@
 <a class="skip" href="#contact">Skip to contact</a>
   <header>
     <div class="wrap nav">
-      <a class="logo" href="index.html" aria-label="Dominic Andreas, CPA"><span class="lockup"><img class="wordmark-da" src="da-monogram.png" alt="" height="40"><span class="lockup-name"><span class="lockup-word">DOMINIC ANDREAS</span><span class="logo-cred">CPA</span></span></span></a>
+      <a class="logo" href="index.html" aria-label="Dominic Andreas, CPA"><span class="lockup"><img class="wordmark-da" src="da-monogram.png" alt="" height="34"><span class="lockup-name"><span class="lockup-word">DOMINIC ANDREAS</span><span class="logo-cred">CPA</span></span></span></a>
       <nav class="nav-right" aria-label="Primary">
         <a href="index.html#services">Services</a>
         <a href="background.html">Background</a>
@@ -276,14 +272,14 @@
 
   <main>
     <section class="band" id="contact" aria-labelledby="contact-title">
-      <div class="wrap">
+      <div class="wrap contact-layout">
+        <div class="contact-actions">
+        <div class="booking-block">
         <div class="contact-copy contact-hero">
           <p class="small">CONTACT</p>
           <h1 id="contact-title">Book a free 20-minute call</h1>
           <p class="intro">Free 20-minute call to see if it is a fit — remote, scoped, and no pressure to expand into a big program. Pick a time that works for you — you’ll get a calendar invite with a Google Meet link.</p>
         </div>
-
-        <div class="booking-block">
           <p class="offer-line">Tell me what you need prepared, reviewed, built, or automated.</p>
           <a class="btn" href="https://calendar.app.google/h16Y8WJkNjMLpuC16" target="_blank" rel="noopener">Book a 20-minute call</a>
         </div>
@@ -298,6 +294,7 @@
             <li>Your timeline and best way to reach you</li>
           </ul>
           <p class="reply-note">I reply within one business day.</p>
+        </div>
         </div>
       </div>
     </section>
@@ -320,7 +317,7 @@
           <div class="guide-txt">
             <p class="small">Free PDF</p>
             <h2 id="guide-title">62 internal tools small and medium-sized businesses are building with AI</h2>
-            <p>An 11-page field guide with sourced examples across finance, sales, marketing, operations, compliance, and HR. <br>A starting point before your next renewal or build-or-buy decision.</p>
+            <p>An 11-page field guide with sourced examples across finance, sales, marketing, operations, compliance, and HR. A starting point before your next renewal or build-or-buy decision.</p>
             <p>Email <a class="email-link" href="mailto:hello.ai.audit@gmail.com">hello.ai.audit@gmail.com</a></p>
             <p class="guide-note">I'll email you the PDF.</p>
           </div>

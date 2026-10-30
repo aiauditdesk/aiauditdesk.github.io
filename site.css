@@ -1,13 +1,13 @@
 :root {
-  --forest: #1F3D32;
-  --forest-2: #18332A;
+  --forest: #46382A;
+  --forest-2: #3E3125;
   --leaf: #7A6540;
   --ink: #1A1714;
   --muted: #6B6256;
   --line: #D6CCBC;
-  --paper: #FFFEF9;
-  --panel: #FFFEF9;
-  --gold: #1F3D32;
+  --paper: #FFFFFF;
+  --panel: #FFFFFF;
+  --gold: #46382A;
   --rule: #D6CCBC;
 }
 
@@ -44,7 +44,7 @@ h1, h2, h3, p, li, .cell span { overflow-wrap: break-word; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--leaf);
+  color: #0B5269;
 }
 .btn {
   display: inline-flex;
@@ -59,7 +59,7 @@ h1, h2, h3, p, li, .cell span { overflow-wrap: break-word; }
   font-size: 14.5px;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 22px rgba(24,51,42,0.22);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.18) inset, 0 8px 22px rgba(53,43,31,0.22);
 }
 .btn:hover { background: var(--forest-2); }
 .btn-line {
@@ -93,7 +93,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #FFFEF9;
+  background: #FFFFFF;
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--rule);
 }
@@ -123,9 +123,16 @@ header {
   font-weight: 500;
   color: var(--muted);
 }
-.nav-right a { transition: color .15s ease; }
+.nav-right a { transition: color .15s ease, border-color .15s ease, background .15s ease; }
 .nav-right a:hover,
 .nav-right a[aria-current="page"] { color: var(--ink); }
+.nav-right a[href*="contact"] {
+  padding: 6px 12px;
+  border: 1px solid #1A1714;
+  border-radius: 5px;
+  color: #1A1714;
+}
+.nav-right a[href*="contact"]:hover { background: #1A1714; color: #FFFFFF; }
 
 .hero { padding: 84px 0 70px; border-bottom: 1px solid var(--rule); }
 .hero-kicker { margin-bottom: 18px; }
@@ -240,7 +247,7 @@ h1.page-title {
 }
 .about-copy .bio p,
 .about-copy .bio div { color: var(--muted); }
-.about-copy .bio p.small { color: var(--leaf); }
+.about-copy .bio p.small { color: #0B5269; }
 .about-copy .bio p + p { margin-top: 16px; }
 .creds { margin-top: 8px; }
 .creds li {
